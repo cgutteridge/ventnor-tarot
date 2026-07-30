@@ -1,1936 +1,1911 @@
-/**
- * Optional per-card notes and source material for the Ventnor Tarot gallery.
- *
- * Keep this file publication-safe: do not add private person-reference images
- * or identifying names unless they are intentionally approved for the site.
- *
- * Landscape / place photographs live in `photos/` and are listed here with
- * `kind: "background"`. Do not store or link people-reference photos here
- * unless the figures appear in the finished card and the user has approved
- * that source for publication (see `wands04`).
- */
 window.CARD_DETAILS = {
-  maj00: {
-    summary:
-      "The Fool is the first step: innocence, trust, and setting out without knowing where the path will lead.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Fool walks toward a cliff with a rose, a bindle on a staff, and a small dog at his heels — blissful, unselfconscious, and ready to begin. The Ventnor version keeps that upward gaze, cliff edge, rose, staff, and leaping dog on a real coastal path.",
-    ventnorNotes:
-      "The cliff photograph makes the leap feel literal and local: dry grass, sea below, and bright sun over Ventnor's edge rather than an painted alpine drop.",
-    learningTarotUrl: "https://www.learntarot.com/maj00.htm",
-    sourceImages: [
-      {
-        src: "sources/maj00-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor coastal cliff photograph used for The Fool",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.590383333333335,
-          longitude: -1.2186055555555557,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj00.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Fool reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj02: {
-    summary:
-      "The High Priestess is quiet knowing: intuition, hidden knowledge, and the threshold between what is shown and what is kept behind the veil.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith High Priestess sits between the pillars of Boaz and Jachin with the TORA scroll, lunar crown, crescent at her feet, and a pomegranate veil arranged as the Tree of Life — still, receptive, and inward. The Ventnor version keeps that seated balance, pillars, scroll, and veil on a real shingle beach.",
-    ventnorNotes:
-      "The beach photograph places her between sea and sky on Ventnor pebbles, so the veil and pillars feel like a threshold on the shore rather than a temple interior.",
-    learningTarotUrl: "https://www.learntarot.com/maj02.htm",
-    sourceImages: [
-      {
-        src: "sources/maj02-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor shingle beach photograph used for The High Priestess",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.593180555555556,
-          longitude: -1.2074916666666666,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj02.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The High Priestess reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj03: {
-    summary:
-      "The Empress is abundance made visible: nurture, fertility, sensual comfort, and the ease of a world that can grow and feed what it loves.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Empress sits among wheat and water with a star crown, pomegranate gown, scepter, and Venus shield — maternal authority rooted in nature. The Ventnor version keeps that seated abundance, wheat sheaf, Venus heart, and scepter while placing her under a real stone arch.",
-    ventnorNotes:
-      "The archway photograph frames the scene with local hillside gardens, a small waterfall, and colourful houses above, so fertility reads as a Ventnor garden terrace rather than an allegorical landscape.",
-    learningTarotUrl: "https://www.learntarot.com/maj03.htm",
-    sourceImages: [
-      {
-        src: "sources/maj03-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor stone archway photograph used for The Empress",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.593269444444445,
-          longitude: -1.2047027777777777,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj03.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Empress reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj01: {
-    summary:
-      "The Magician is focused will made visible: gathering the means at hand, channelling intention, and the moment when thought becomes action.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Magician stands with one hand raised and one pointing down, the lemniscate above his head, and the four suit emblems on the table before him — as above, so below. The Ventnor version keeps that upright gesture, infinity symbol, and tool arrangement while translating the emblems into the deck's local objects.",
-    ventnorNotes:
-      "The stone wall and ivy make the working feel like a real outdoor table rather than a painted stage. The Fringe pint cup, Ventnor souvenir pentacle, and picnic-table props keep the four suits in the town's own register.",
-    learningTarotUrl: "https://www.learntarot.com/maj01.htm",
-    sourceImages: [
-      {
-        src: "sources/maj01-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor stone wall photograph used for The Magician",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/maj01.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Magician reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj04: {
-    summary:
-      "The Emperor is structure and authority: stable rule, fatherly order, and the power to hold a boundary so that life inside it can grow.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Emperor sits on a stone throne with ram heads, ankh scepter, and orb — armored under red robes, crowned, and facing the viewer with uncompromising presence. The Ventnor version keeps that seated dominion, four rams, ankh, and orb while casting a real local sitter into the role.",
-    ventnorNotes:
-      "The rocky beach photograph replaces painted mountains with Ventnor stone and shingle, so authority feels grounded in a real shoreline rather than an allegorical waste.",
-    learningTarotUrl: "https://www.learntarot.com/maj04.htm",
-    sourceImages: [
-      {
-        src: "sources/maj04-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor rocky beach photograph used for The Emperor",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.58867777777778,
-          longitude: -1.224175,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj04.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Emperor reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj05: {
-    summary:
-      "The Hierophant is shared teaching and tradition: blessing, initiation, and the living hand-off of meaning from one generation to the next.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Hierophant sits between pillars with a papal tiara, triple cross, blessing hand, two kneeling initiates (roses and lilies), and crossed keys. The Ventnor version keeps that structure while casting a real local sitter into the role.",
-    ventnorNotes:
-      "The stone church doorway photograph replaces painted pillars with a real Gothic arch and checkered threshold, so institution and welcome feel grounded in a Ventnor entrance rather than an allegorical temple.",
-    learningTarotUrl: "https://www.learntarot.com/maj05.htm",
-    sourceImages: [
-      {
-        src: "sources/maj05-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor stone church doorway photograph used for The Hierophant",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.596161111111115,
-          longitude: -1.2173277777777778,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj05.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Hierophant reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj06: {
-    summary:
-      "The Lovers is choice and union: attraction, aligned values, and the moment when two paths become one decision.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Lovers places a man and woman beneath a blessing angel, with the Tree of Knowledge (and serpent) behind her and the Tree of Life's twelve flames behind him, and a mountain between them. The Ventnor version keeps that blessing structure, dual trees, and central mound while dressing the couple in beach swimwear on a real shore.",
-    ventnorNotes:
-      "The pebble beach photograph and sea horizon make the encounter feel local and sunlit; a mound of orange-red beach pebbles stands in for the painted mountain between them.",
-    learningTarotUrl: "https://www.learntarot.com/maj06.htm",
-    sourceImages: [
-      {
-        src: "sources/maj06-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor pebble beach photograph used for The Lovers",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59317777777778,
-          longitude: -1.2074888888888888,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj06.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Lovers reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj07: {
-    summary:
-      "The Chariot is directed will: momentum under control, opposing forces yoked, and the drive to move forward without losing the reins.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Chariot shows a crowned warrior in a canopy chariot drawn by black and white sphinxes, with starry canopy, crescent moons, and wand in hand. The Ventnor version keeps that dual harness and charioteer authority while translating the vehicle into a real vintage bus.",
-    ventnorNotes:
-      "The steep Ventnor street photograph replaces painted city walls with a real downhill road and mural façade, so victory reads as local progress rather than an allegorical campaign.",
-    learningTarotUrl: "https://www.learntarot.com/maj07.htm",
-    sourceImages: [
-      {
-        src: "sources/maj07-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor steep street photograph used for The Chariot",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59648611111111,
-          longitude: -1.2008527777777778,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj07.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Chariot reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups01: {
-    summary:
-      "Ace of Cups is the open heart: new feeling, generosity, intuition, and the first overflow of love or creativity.",
-    learningTarotUrl: "https://www.learntarot.com/ca.htm",
-    sourceImages: [
-      {
-        src: "sources/cups01-background.png",
-        label: "Background photo",
-        alt: "Original Ventnor garden pond photograph used for the Ace of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59917777777778,
-          longitude: -1.190336111111111,
-          source: "exif",
-        },
-      },
-    ],
-  },
-  cups02: {
-    summary:
-      "A card about meeting another person as an equal: shared feeling, truce, attraction, and the moment when two separate lives decide to face one another directly.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card centres on two figures exchanging cups beneath the winged lion and caduceus. The Ventnor version keeps the direct face-to-face structure and the sense of charged agreement, while translating the cups into the deck's Ventnor Fringe pint-cup language.",
-    ventnorNotes:
-      "The real background gives the encounter a local, everyday setting instead of a ceremonial one. The point is not to make the scene grander, but to make the emotional exchange feel as if it could happen in the town itself.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/c2.htm",
-    sourceImages: [
-      {
-        src: "sources/cups02-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor background photograph used for the Two of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.598725,
-          longitude: -1.2149722222222221,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/cups02.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Two of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups03: {
-    summary:
-      "Three of Cups is celebration and friendship: shared joy, community toasting together, and the ease of belonging in a moment of abundance.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows three figures raising cups in a circle amid a harvest of fruit — fellowship, revelry, and mutual support. The Ventnor version keeps that toasting trio and harvest mood while placing the scene in front of a real circus tent.",
-    ventnorNotes:
-      "The red-and-silver big top and dry grass make the revel feel like a Ventnor Fringe afternoon: circus performers toasting in costume rather than a painted orchard dance.",
-    peopleContext:
-      "Exception: the source photograph includes the three figures who appear on the finished card, and is approved for the site for that reason. People-reference photos are not published for other cards.",
-    learningTarotUrl: "https://www.learntarot.com/c3.htm",
-    sourceImages: [
-      {
-        src: "sources/cups03-background.jpg",
-        label: "Source photo (place and figures)",
-        alt: "Original circus-tent photograph with the three celebrants used for the Three of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups03.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Three of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups04: {
-    summary:
-      "Four of Cups is apathy and withdrawal: boredom with what is already in front of you, and a reluctance to notice the new offer arriving from outside.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure sits with folded arms beneath a tree, three cups on the ground and a fourth offered from a cloud — dissatisfied, inward, and not yet ready to receive. The Ventnor version keeps that seated refusal and cup count while placing the scene on a real shingle beach.",
-    ventnorNotes:
-      "The beach photograph and wooden groyne make the stalemate feel local and sunlit rather than allegorical; the Fringe pint cups keep the suit language in the town's own register.",
-    learningTarotUrl: "https://www.learntarot.com/c4.htm",
-    sourceImages: [
-      {
-        src: "sources/cups04-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor shingle beach photograph used for the Four of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59294166666667,
-          longitude: -1.2096583333333333,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/cups04.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Four of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups05: {
-    summary:
-      "Five of Cups is loss and regret: grief fixed on what has spilled, while what remains upright goes unnoticed behind you.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure stands cloaked and bowed before three overturned cups, with two still standing at their back and a bridge beyond. The Ventnor version keeps that mourning stance and cup count while translating the vessels into Ventnor Fringe pint cups — beer still in the upright pair, spilled from the fallen three.",
-    ventnorNotes:
-      "The Cascade arched plaza — stone-and-brick viaduct, circular paving, and bright coastal light — gives the lament a recognisable Ventnor setting; benches were cleared from the paving so the figure and cups can read cleanly.",
-    learningTarotUrl: "https://www.learntarot.com/c5.htm",
-    sourceImages: [
-      {
-        src: "sources/cups05-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor Cascade plaza photograph used for the Five of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.593269444444445,
-          longitude: -1.2047027777777777,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/cups05.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Five of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups06: {
-    summary:
-      "Six of Cups is nostalgia and simple kindness: childhood memory, a gift freely offered, and the warmth of looking back without bitterness.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows an older child offering a flower-filled cup to a smaller child, with six cups in total arranged around a village courtyard. The Ventnor version keeps that tender exchange and cup count while translating the vessels into Ventnor Fringe pint cups filled with white flowers.",
-    ventnorNotes:
-      "The real stone church courtyard — wall, bench, rose windows, and downhill street — grounds the reminiscence in a recognisable Ventnor place rather than a painted village.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/c6.htm",
-    sourceImages: [
-      {
-        src: "sources/cups06-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor church courtyard photograph used for the Six of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups06.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Six of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups07: {
-    summary:
-      "Seven of Cups is fantasy and choice: many glittering options, each a wish or illusion, and the hard work of picking one path.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure faces seven cups rising from clouds, each holding a different vision — head, shrouded spirit, snake, castle, jewels, laurel and skull, dragon. The Ventnor version keeps that choice-array and translates every vessel into a Ventnor Fringe pint cup with single-colour festival line-art for the visions.",
-    ventnorNotes:
-      "The coastal path overlooking Ventnor and the sea makes the daydream feel local and sunlit; the floating Fringe cups turn the visions into festival ephemera rather than golden chalices.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/c7.htm",
-    sourceImages: [
-      {
-        src: "sources/cups07-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor coastal path photograph used for the Seven of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups07.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Seven of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups08: {
-    summary:
-      "Eight of Cups is walking away: leaving what is unfinished or unsatisfying, and turning toward a harder, quieter path.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure in a red cloak abandons eight cups arranged with a deliberate gap, walking toward rocky ground under a faced moon. The Ventnor version keeps that departure, the incomplete cup stack, the staff, and the moon-face while translating the vessels into Ventnor Fringe pint cups.",
-    ventnorNotes:
-      "The real boulder beach under clear sky grounds the leave-taking in Ventnor stone and shingle rather than painted mountains; the faced crescent keeps the nocturnal omen in daylight.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/c8.htm",
-    sourceImages: [
-      {
-        src: "sources/cups08-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor rocky beach photograph used for the Eight of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups08.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Eight of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups09: {
-    summary:
-      "Nine of Cups is satisfaction: wishes granted for a moment, contentment displayed, and the quiet pride of having enough.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure sits arms crossed before a curved bank of nine cups, smiling in fulfilled pleasure. The Ventnor version keeps that satisfied pose and the nine-vessel display while translating every cup into a Ventnor Fringe pint with single-colour festival line-art and varied print facing.",
-    ventnorNotes:
-      "The Fringe tent bar interior grounds the feast in festival hospitality: full poured pints on the bar behind a seated host, under yellow-and-red canopy rather than a painted banquet hall.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/c9.htm",
-    sourceImages: [
-      {
-        src: "sources/cups09-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor Fringe tent bar photograph used for the Nine of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups09.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Nine of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups10: {
-    summary:
-      "Ten of Cups is lasting emotional fulfillment: family harmony, a home blessed, and the joy of true wealth — love and belonging rather than material gain.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a couple with raised arms and two dancing children beneath a rainbow carrying ten cups. The Ventnor version keeps that family celebration, rainbow geometry, and ten-vessel count while translating every cup into a Ventnor Fringe pint with varied print facing along the arc.",
-    ventnorNotes:
-      "The hillside garden photograph — pond, path, and houses under open sky — grounds the domestic blessing in a recognisable Ventnor place; the luminous rainbow crowns the home rather than a painted pastoral.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/c10.htm",
-    sourceImages: [
-      {
-        src: "sources/cups10-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor hillside garden photograph used for the Ten of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups10.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Ten of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands01: {
-    summary:
-      "Ace of Wands is the spark of initiative: a new enterprise, creative fire, and the courage to begin before the path is fully known.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Ace shows a hand emerging from a cloud gripping a living wand with fresh shoots and floating leaves — pure potential offered from beyond. The Ventnor version keeps that hand-from-cloud offer and living branch language against a clear Ventnor sky.",
-    ventnorNotes:
-      "The sunny dry hillside photograph, cropped to a thin ground strip under open blue sky, keeps the Ace spare and local: inspiration over Ventnor downland rather than a painted castle landscape.",
-    learningTarotUrl: "https://www.learntarot.com/wa.htm",
-    sourceImages: [
-      {
-        src: "sources/wands01-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor hillside photograph used for the Ace of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands01.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Ace of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands02: {
-    summary:
-      "Two of Wands is foresight and choice: the world held in hand, a plan surveyed from higher ground, and the courage to step beyond the familiar wall.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure stands on battlements between two living wands — one held, one fixed to the wall — looking outward while cradling a globe. The Ventnor version keeps that rear three-quarter pose, globe, rose-and-lily wall emblem, and the right wand clamped to the parapet near top and bottom.",
-    ventnorNotes:
-      "The elevated Ventnor seafront terrace — stone parapet, metal rail, Spyglass hillside, red garden beds, beach and bay — makes the survey of possibilities feel local: dominion and decision over a real Isle of Wight shoreline rather than a painted castle view.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/w2.htm",
-    sourceImages: [
-      {
-        src: "sources/wands02-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor seafront terrace photograph used for the Two of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands02.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Two of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups11: {
-    summary:
-      "Page of Cups is imaginative message and open-hearted curiosity: a surprise from the feelings, a creative spark, and willingness to listen to something unexpected.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Page stands by the sea in a blue tunic with floral motifs, one hand on hip, gazing at a fish rising from a single cup — youthful, receptive, and slightly astonished. The Ventnor version keeps that pose, blue chaperon, pink accents, and the fish-from-cup omen while placing the Page on a real Ventnor promenade.",
-    ventnorNotes:
-      "The esplanade photograph — black railing, paved walkway, and open sea under soft cloud — grounds the Page's quiet surprise in a recognisable Ventnor shoreline rather than a painted shore.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/cpg.htm",
-    sourceImages: [
-      {
-        src: "sources/cups11-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor esplanade photograph used for the Page of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59313055555556,
-          longitude: -1.2064694444444444,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/cups11.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Page of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups12: {
-    summary:
-      "Knight of Cups is romantic offer and imaginative pursuit: feeling led by the heart, bringing a proposal or invitation, and moving toward beauty rather than force.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Knight rides a pale horse in quiet forward motion, holding a single cup — poetic, receptive, and deliberate rather than charging. The Ventnor version keeps that calm stride and fish-patterned tunic while translating the vessel into a Ventnor Fringe pint cup and leaving the rider bareheaded in glasses.",
-    ventnorNotes:
-      "The garden photograph — dry lawn, dense shrubs, and the forked light-barked tree — grounds the romantic messenger in a recognisable Ventnor place rather than a painted desert stream.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/ckn.htm",
-    sourceImages: [
-      {
-        src: "sources/cups12-background.png",
-        label: "Background photo",
-        alt: "Original Ventnor garden photograph used for the Knight of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups12.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Knight of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups13: {
-    summary:
-      "Queen of Cups is deep feeling and quiet intuition: emotional clarity held with care, compassion that listens, and a calm centre beside the water.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Queen sits on a carved throne at the shore, gazing into an ornate closed cup — contemplative, receptive, and wholly absorbed. The Ventnor version keeps that seaside throne and focused study of the vessel while translating the cup into a Ventnor Fringe plastic pint.",
-    ventnorNotes:
-      "The shingle beach photograph — foam line, pebble shore, and hillside town under bright sun — grounds the Queen in a recognisable Ventnor coast; the shell-backed stone throne and water-patterned cloak keep the water-court language local and ceremonial.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/cq.htm",
-    sourceImages: [
-      {
-        src: "sources/cups13-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor beach photograph used for the Queen of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups13.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Queen of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  cups14: {
-    summary:
-      "King of Cups is emotional mastery: calm authority over feeling, compassion without being swept away, and steady counsel in the midst of turbulence.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith King sits composed on a throne amid the sea, holding a cup and short scepter, with a leaping fish and distant ship — mastery of emotion rather than denial of it. The Ventnor version keeps that sea-throne calm and fish-pendant symbolism while translating the vessel into a Ventnor Fringe plastic pint and the leaping fish into a dolphin.",
-    ventnorNotes:
-      "The open-sea photograph — level horizon, pale sky, and gentle ripples — grounds the King in recognisable Ventnor water rather than a painted grey void; the stone throne and Fringe cup keep court and festival in the same frame.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/ckg.htm",
-    sourceImages: [
-      {
-        src: "sources/cups14-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor open-sea photograph used for the King of Cups",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/cups14.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith King of Cups reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj10: {
-    summary:
-      "Wheel of Fortune is the turn of events: luck, reversal, timing, and the feeling that a larger pattern has suddenly become visible.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith design is built around the wheel, four surrounding emblems, and the sense of motion above ordinary human control. The Ventnor card keeps the circular mechanism and replaces the eagle with a seagull, matching the deck's rule for localising that symbol.",
-    ventnorNotes:
-      "The Ventnor street-clock facade — stone wall, flanking windows, and ornate surround — makes chance feel public and local: time fixed on a real building rather than a painted sky. The shop signage below the ledge is cropped out of the official background.",
-    learningTarotUrl: "https://www.learntarot.com/maj10.htm",
-    sourceImages: [
-      {
-        src: "sources/maj10-background.jpg",
-        label: "Background photo",
-        alt: "Ventnor street-clock facade photograph used for Wheel of Fortune (shop signage cropped out)",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.595308333333335,
-          longitude: -1.2057277777777777,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj10.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Wheel of Fortune reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj12: {
-    summary:
-      "The Hanged Man is voluntary pause: surrender, a new perspective, and the quiet insight that comes from stopping rather than forcing the next step.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure hangs upside down by one ankle in a living tau cross, other leg crossed in a four, arms behind the back, with a radiant halo — calm, not struggling. The Ventnor version keeps that pose, living crossbeam, and halo on a real harbour mast.",
-    ventnorNotes:
-      "The weathered wooden mast, metal base, and Spireless Cup yard place the sacrifice and inversion in a recognisable Ventnor outdoor setting rather than an empty allegorical ground.",
-    learningTarotUrl: "https://www.learntarot.com/maj12.htm",
-    sourceImages: [
-      {
-        src: "sources/maj12-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor harbour mast yard photograph used for The Hanged Man",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.593022222222224,
-          longitude: -1.2100638888888888,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj12.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Hanged Man reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj13: {
-    summary:
-      "Death is unavoidable transformation: the ending of one chapter so another can begin, the skeleton that passes through every station of life and bows to none of them.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Death rides a white horse in black armour, carrying a black flag bearing a white five-petalled rose. A king lies fallen, a bishop prays, a young woman turns away, and a child holds up flowers — only the child looks directly at the rider. Behind them the sun rises between two towers. The Ventnor version keeps the armoured skeleton, white horse, black rose banner, the four supplicants, and the twin towers — here the St Boniface Down radio masts — in the golden sunset light.",
-    ventnorNotes:
-      "The dry hillside above Ventnor sets the scene on recognisable Isle of Wight terrain: the two St Boniface Down masts stand in for Rider-Waite's twin towers as the sun rises (or sets) between them, making transformation feel rooted in the island's own skyline.",
-    learningTarotUrl: "https://www.learntarot.com/maj13.htm",
-    sourceImages: [
-      {
-        src: "rider-waite/maj13.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Death reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj16: {
-    summary:
-      "The Tower is sudden upheaval: structures breaking, false security struck down, and the hard clarity that comes when something unsustainable finally falls.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a tower struck by lightning, a crown blasted free, fire at the summit, and two figures falling headfirst — catastrophe as revelation. The Ventnor version keeps that lightning strike, falling crown, flames, and dual fallers on a real local building.",
-    ventnorNotes:
-      "The Ventnor Botanic Garden entrance tower photograph grounds the disaster in a recognisable place: white glass cylinder, agapanthus planter, and storm-dark sky instead of an allegorical mountain peak.",
-    learningTarotUrl: "https://www.learntarot.com/maj16.htm",
-    sourceImages: [
-      {
-        src: "sources/maj16-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor Botanic Garden entrance photograph used for The Tower",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.593716666666666,
-          longitude: -1.2046944444444443,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj16.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Tower reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj17: {
-    summary:
-      "The Star is hope after hardship: calm renewal, quiet faith, and the sense that inspiration can refill what was emptied.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Star shows a kneeling woman pouring from two vessels into water and onto land beneath one large star and seven smaller ones, with a bird on a tree. The Ventnor version keeps that pour pose, eight stars, and seagull-on-bush while casting a real local sitter — black dress, tattoos kept.",
-    ventnorNotes:
-      "The coastal pool photograph replaces painted landscape with a recognisable Ventnor edge-of-sea hollow, graded day-for-night like The Moon and The Hermit.",
-    learningTarotUrl: "https://www.learntarot.com/maj17.htm",
-    sourceImages: [
-      {
-        src: "sources/maj17-background.jpg",
-        label: "Background photo",
-        alt: "Daytime Ventnor coastal pool photograph used for The Star",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/maj17.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Star reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj08: {
-    summary:
-      "Strength is gentle courage: calm mastery of force, patience under pressure, and the quiet confidence to meet something fierce without becoming fierce yourself.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a woman closing a lion's mouth with quiet hands, an infinity above her head, and a floral crown and sash. The Ventnor version keeps that compassionate control and the lemniscate while placing the encounter on real downland.",
-    ventnorNotes:
-      "The hillside photograph makes the encounter feel local and daylight-ordinary: open fields and sky behind a still, trusting lion.",
-    learningTarotUrl: "https://www.learntarot.com/maj08.htm",
-    sourceImages: [
-      {
-        src: "sources/maj08-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor downland photograph used for Strength",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.60329166666667,
-          longitude: -1.2073555555555555,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj08.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Strength reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj09: {
-    summary:
-      "The Hermit is solitude and inner guidance: stepping aside from the crowd, carrying your own light, and finding what only quiet looking can reveal.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Hermit stands alone on a peak with a lantern (Seal of Solomon) and staff, hooded and withdrawn. The Ventnor version keeps that solitary lantern-and-staff stance while casting a real local sitter into the role — hood down, sunglasses kept.",
-    ventnorNotes:
-      "The night gravel hillside with its distant communications tower replaces painted mountains with a real Ventnor edge-of-town quiet, graded day-for-night like The Moon and The Star.",
-    learningTarotUrl: "https://www.learntarot.com/maj09.htm",
-    sourceImages: [
-      {
-        src: "sources/maj09-background.jpg",
-        label: "Background photo",
-        alt: "Night Ventnor hillside photograph used for The Hermit",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59422222222222,
-          longitude: -1.2081055555555555,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj09.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Hermit reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj11: {
-    summary:
-      "Justice is clear judgment: weighing what is fair, facing consequences, and holding a decision with an even hand.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Justice sits between pillars with an upright sword and balanced scales, crowned and robed in red. The Ventnor version keeps that symmetrical seat of judgment while casting a real local sitter into the role — sunglasses and makeup kept, crown added.",
-    ventnorNotes:
-      "The stone steps and hoop-top railing photograph replace the painted throne-room with a real outdoor threshold; pillars and a red drape stage the formal seat of judgment on those steps.",
-    learningTarotUrl: "https://www.learntarot.com/maj11.htm",
-    sourceImages: [
-      {
-        src: "sources/maj11-background.jpg",
-        label: "Background photo",
-        alt: "Stone steps and railing photograph used for Justice",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59249722222223,
-          longitude: -1.2159888888888888,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj11.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Justice reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj15: {
-    summary:
-      "The Devil is bondage and appetite: the chains we could slip, the shadow we feed, and the bright exit we ignore while staring at the pedestal.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Devil perches on a block with raised hand and torch, while two horned figures stand chained below with grape and flame tails. The Ventnor version keeps that structure as a bronze sculpture installation — clothed attendants, loose ceremonial chains, grape-tail and living fire-tail.",
-    ventnorNotes:
-      "The coastal tunnel photograph replaces painted blackness with a real dark passage opening onto grey sea, so temptation and exit share one frame.",
-    learningTarotUrl: "https://www.learntarot.com/maj15.htm",
-    sourceImages: [
-      {
-        src: "sources/maj15-background.jpg",
-        label: "Background photo",
-        alt: "Coastal tunnel photograph used for The Devil",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/maj15.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Devil reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj18: {
-    summary:
-      "The Moon is uncertainty and intuition: half-seen truths, animal instinct, and the path that must be walked by feel rather than by daylight.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Moon hangs with a face and rays above yods, a dog and wolf, twin towers, and a crayfish rising from water. The Ventnor version keeps that night symbolism while casting local radio towers as the twin pillars and a live European lobster in the stream.",
-    ventnorNotes:
-      "The garden stream photograph stays recognisable under day-for-night grade; Ventnor radio towers replace painted stone towers, and the lobster is Homarus gammarus — the blue-black common lobster potters land around the Island.",
-    learningTarotUrl: "https://www.learntarot.com/maj18.htm",
-    sourceImages: [
-      {
-        src: "sources/maj18-background.jpg",
-        label: "Background photo",
-        alt: "Stream and garden photograph used for The Moon",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59246944444445,
-          longitude: -1.2159583333333333,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj18.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith The Moon reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  maj19: {
-    summary:
-      "The Sun is clarity and warmth: simple joy, vitality, and the feeling that things are openly, unmistakably good.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card centres on a large sun, a pale horse, and a joyful child with a red banner among sunflowers. The Ventnor version keeps that buoyant structure while translating the rider and horse into toy scale in a real garden.",
-    ventnorNotes:
-      "The garden photograph keeps the card local and everyday: hoop fence, marigolds, and raised planters stand in for the traditional wall of sunflowers, under an enlarged faceless sun.",
-    learningTarotUrl: "https://www.learntarot.com/maj19.htm",
-    sourceImages: [
-      {
-        src: "sources/maj19-background.jpg",
-        label: "Background photo",
-        alt: "Original garden photograph used for The Sun",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.592105555555555,
-          longitude: -1.217213888888889,
-          source: "exif",
-        },
-      },
-    ],
-  },
-  maj20: {
-    summary:
-      "Judgement is awakening and reckoning: a call to rise, review what has been, and step into a clearer next life.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows an angel with trumpet and St George banner calling figures up from graves. The Ventnor version keeps that trumpet call, clean cross banner, and rising figures while casting a recognisable local angel over a real cemetery.",
-    ventnorNotes:
-      "The hillside graveyard and chapel photograph ground the resurrection scene in a local place; the angel keeps her red sunglasses, fire hair, and pendant as the card's living signal.",
-    learningTarotUrl: "https://www.learntarot.com/maj20.htm",
-    sourceImages: [
-      {
-        src: "sources/maj20-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor hillside cemetery photograph used for Judgement",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59685555555556,
-          longitude: -1.21635,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/maj20.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Judgement reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents01: {
-    summary:
-      "Ace of Pentacles is a tangible beginning: opportunity, prosperity, and the first seed of something solid taking root in the material world.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a hand emerging from cloud to offer a single pentacle over a garden path and archway. The Ventnor version keeps that offering gesture, sky-dominant composition, and garden threshold while using the deck's fixed Ventnor souvenir pentacle.",
-    ventnorNotes:
-      "The park photograph with its vine-covered arch and dry summer lawn grounds the gift in a real local place; natural mist at the wrist replaces the carved cloud without losing the sense of something offered from beyond the everyday.",
-    learningTarotUrl: "https://www.learntarot.com/pa.htm",
-    sourceImages: [
-      {
-        src: "sources/pents01-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor park and garden arch photograph used for the Ace of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.58891666666667,
-          longitude: -1.2268444444444446,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/pents01.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Ace of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents02: {
-    summary:
-      "Two of Pentacles is balance under pressure: keeping two demands in motion, adapting to change, and staying light enough to continue.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a figure juggling two pentacles inside an infinity loop, with ships rising and falling behind. The Ventnor version keeps the paired pentacles and rhythmic balancing act while using the deck's fixed pentacle design.",
-    ventnorNotes:
-      "The local background gives the card a coastal instability: movement, weather, and changing ground make the act of balance feel practical rather than abstract.",
-    learningTarotUrl: "https://www.learntarot.com/p2.htm",
-    sourceImages: [
-      {
-        src: "sources/pents02-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor background photograph used for the Two of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59286388888889,
-          longitude: -1.2058888888888888,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/pents02.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Two of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents03: {
-    summary:
-      "Three of Pentacles is skilled collaboration: craft meeting plan, shared standards, and work that improves because more than one person cares about the result.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a craftsperson on a bench with two planners beneath a carved triad of pentacles — labour, design, and patronage in one frame. The Ventnor version keeps that three-person review around a hanging triad while using the deck's fixed Ventnor souvenir pentacles.",
-    ventnorNotes:
-      "The festival tent, red pole, and wrought-iron arch turn the workshop into a local Fringe build: the blueprint, mallet, and hanging coins make collaboration feel practical and place-specific rather than cathedral-bound.",
-    peopleContext:
-      "Exception: the source photograph includes the two figures who appear on the finished card (with a third planner added for the RWS triad), and is approved for the site as both place and figure source. People-reference photos are not published for other cards.",
-    learningTarotUrl: "https://www.learntarot.com/p3.htm",
-    sourceImages: [
-      {
-        src: "sources/pents03-background.jpg",
-        label: "Source photo (place and figures)",
-        alt: "Original festival tent photograph with the two figures used for the Three of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents03.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Three of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents04: {
-    summary:
-      "Four of Pentacles is holding on: security, possession, and the tight grip that keeps what you have close — sometimes too close.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a seated figure clutching one pentacle to the chest, with one on the crown and one under each foot — a closed circuit of material control. The Ventnor version keeps that possessive four-coin structure while using the deck's fixed Ventnor souvenir pentacles.",
-    ventnorNotes:
-      "A stone seat against a dense local hedge grounds the hoarding pose in a real Ventnor place; the trucker hat stands in for the crown, and the flat coin balanced on it reads as a precarious party trick rather than a carved royal emblem.",
-    learningTarotUrl: "https://www.learntarot.com/p4.htm",
-    sourceImages: [
-      {
-        src: "sources/pents04-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor hedge and pavement photograph used for the Four of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents04.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Four of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents05: {
-    summary:
-      "Five of Pentacles is hardship outside the warm light: exclusion, material worry, and the cold walk past help that may still be near.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows two impoverished figures trudging through snow past a glowing stained-glass window of five pentacles — need framed against sanctuary. The Ventnor version keeps that winter passage and five-coin window while using the deck's fixed Ventnor souvenir pentacles.",
-    ventnorNotes:
-      "The pale ashlar facade with matched white sash windows grounds the scene in a recognisable Ventnor street; winter night and stained glass turn one window into the five-coin sanctuary while a partial neighbour window stays decorative only.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/p5.htm",
-    sourceImages: [
-      {
-        src: "sources/pents05-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor street facade photograph used for the Five of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents05.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Five of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents06: {
-    summary:
-      "Six of Pentacles is charity and fair exchange: giving or receiving with balance, and the measured flow of resources between those who have and those who need.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith merchant stands with balanced scales, dropping coins to one kneeling beggar while another waits — generosity weighed as well as offered. The Ventnor version keeps that three-figure charity scene and six floating coins while using the deck's fixed Ventnor souvenir pentacles.",
-    ventnorNotes:
-      "The Trinity Road gravel and stone house photograph grounds the exchange in a recognisable Ventnor place; the hillside and clear sky keep the scene sunlit and local rather than a painted grey void.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/p6.htm",
-    sourceImages: [
-      {
-        src: "sources/pents06-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor Trinity Road photograph used for the Six of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents06.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Six of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents07: {
-    summary:
-      "Seven of Pentacles is patience after labour: pausing to assess what has grown, whether to wait longer, and the long view of effort already invested.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith labourer leans on his hoe beside a vine bearing six pentacles, with a seventh on the ground — harvest contemplated rather than taken. The Ventnor version keeps that paused assessment, six coins in the bush and one at his feet, while using the deck's fixed Ventnor souvenir pentacles.",
-    ventnorNotes:
-      "The dry-field photograph with the left gorse bush, golden grass, and clear blue sky over distant hills grounds the pause in a real Ventnor place; the bush stands in for the vine without inventing a different landscape.",
-    peopleContext:
-      "The figure is treated as a non-identifying local participant in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/p7.htm",
-    sourceImages: [
-      {
-        src: "sources/pents07-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor dry-field photograph with gorse bush used for the Seven of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents07.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Seven of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents08: {
-    summary:
-      "Eight of Pentacles is skilled diligence: focused craft, repetition that builds mastery, and work taken seriously enough to improve.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith apprentice sits at a bench engraving a pentacle, with six finished coins displayed on a post and one on the ground — labour in progress. The Ventnor version keeps that seated craftsman, vertical display of finished work, and eight-coin count while using the deck's fixed Ventnor souvenir pentacles.",
-    ventnorNotes:
-      "The park photograph under the tree — with the wooden bench, trunk, and orange frame beyond — grounds the workshop in a real Ventnor place; shade and sunlit lawn keep the craft local rather than a painted void.",
-    learningTarotUrl: "https://www.learntarot.com/p8.htm",
-    sourceImages: [
-      {
-        src: "sources/pents08-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor park photograph with bench and tree used for the Eight of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents08.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Eight of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents09: {
-    summary:
-      "Nine of Pentacles is earned ease: self-reliance, cultivated abundance, and the quiet confidence of someone who can enjoy the garden they have grown.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith noble stands in a vineyard with a bird on a gloved hand, six pentacles on the left (one under her touch) and three on the right — cultivated wealth held lightly. The Ventnor version keeps that garden pose, falconry glove, and 6+3 coin layout while using the deck's fixed Ventnor souvenir pentacles; sunglasses rest on her head in place of a formal cap.",
-    ventnorNotes:
-      "The garden photograph — paved path, low stone wall, and agapanthus beds — grounds her ease in a recognisable Ventnor place rather than a painted vineyard; the snail at her feet keeps the RWS detail local and literal.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/p9.htm",
-    sourceImages: [
-      {
-        src: "sources/pents09-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor garden photograph with agapanthus and stone wall used for the Nine of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.589297,
-          longitude: -1.230433,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/pents09.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Nine of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents10: {
-    summary:
-      "Ten of Pentacles is lasting wealth: family legacy, rooted security, and the abundance that holds across generations.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows an elder with dogs before an archway, a couple and child beyond, and ten pentacles arranged as the Tree of Life — inheritance made visible. The Ventnor version keeps that multi-generational gathering, arch passage, and Sephiroth coin layout while using the deck's fixed Ventnor souvenir pentacles.",
-    ventnorNotes:
-      "The High Street flint arch photograph — bay window, bargeboard trim, and the street sign above the passage — turns the RWS gateway into a recognisable Ventnor entrance, so legacy reads as local and literal rather than a painted estate.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/p10.htm",
-    sourceImages: [
-      {
-        src: "sources/pents10-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor High Street flint-arch photograph used for the Ten of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents10.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Ten of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents11: {
-    summary:
-      "Page of Pentacles is practical potential: a new skill, a tangible opportunity, and careful attention to something that could grow into real substance.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Page stands in a field studying a single pentacle held in both hands — curious, grounded, and focused on what the coin might become. The Ventnor version keeps that contemplative pose and the red Page hat while using the deck's fixed Ventnor souvenir pentacle.",
-    ventnorNotes:
-      "The downland photograph places the study of opportunity against open Isle of Wight fields and a distant sea horizon, so the Page's attention feels local and literal rather than allegorical.",
-    learningTarotUrl: "https://www.learntarot.com/ppg.htm",
-    sourceImages: [
-      {
-        src: "sources/pents11-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor downland photograph used for the Page of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.604725,
-          longitude: -1.1941833333333334,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/pents11.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Page of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents12: {
-    summary:
-      "Knight of Pentacles is steady work: patience, reliability, and careful progress toward something solid rather than a dramatic charge.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Knight sits still on a dark horse holding a single pentacle — methodical, grounded, and unhurried. The Ventnor version keeps that stationary pose and the leafy helm detail while using the deck's fixed Ventnor souvenir pentacle.",
-    ventnorNotes:
-      "The downland path photograph places the knight's deliberate pace on a real Ventnor track under open blue sky, so diligence feels local and literal.",
-    learningTarotUrl: "https://www.learntarot.com/pkn.htm",
-    sourceImages: [
-      {
-        src: "sources/pents12-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor downland path photograph used for the Knight of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.60226388888889,
-          longitude: -1.2143944444444443,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/pents12.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Knight of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents13: {
-    summary:
-      "Queen of Pentacles is grounded abundance: practical care, nurture of what is real and valuable, and quiet prosperity rooted in place.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Queen sits on a carved stone throne cradling a single pentacle, with a rose bower overhead and a rabbit at her feet — nurturing attention to the material world. The Ventnor version keeps that seated study of the coin, floral canopy, and rabbit while using the deck's fixed Ventnor souvenir pentacle.",
-    ventnorNotes:
-      "The chalk-downland photograph — yellow wildflowers, scrub bands, rolling hills, and distant sea under clear blue sky — grounds the Queen in a recognisable Ventnor hillside rather than a painted yellow void.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/pq.htm",
-    sourceImages: [
-      {
-        src: "sources/pents13-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor chalk-downland photograph with yellow wildflowers used for the Queen of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents13.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Queen of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  pents14: {
-    summary:
-      "King of Pentacles is established prosperity: steady mastery of the material world, reliable authority, and wealth rooted in care for land and livelihood.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith King sits on a bull-carved throne holding a scepter and a single pentacle, robed in grapevines — grounded material success. The Ventnor version keeps that seated authority, bull motifs, orb-topped scepter, and grape robe while using the deck's fixed Ventnor souvenir pentacle.",
-    ventnorNotes:
-      "The hotel, variegated hedge, stone retaining wall, and sloping road photograph seats the throne against a recognisable Ventnor street frontage under overcast sky rather than a painted yellow void.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/pkg.htm",
-    sourceImages: [
-      {
-        src: "sources/pents14-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor hotel, hedge, stone wall and sloping road photograph used for the King of Pentacles",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/pents14.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith King of Pentacles reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords01: {
-    summary:
-      "Ace of Swords is the pure force of mind and truth: a breakthrough, a decisive clarity, and the power of an idea whose moment has come.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a disembodied hand emerging from cloud on the left, holding a longsword upright, crowned with a gold crown hung with laurel and a palm frond, yods raining down. The Ventnor version keeps the triumphant vertical sword, the crowned blade, and the yods while replacing the grey clouds with realistic wisps of smoke and setting the scene against a clear blue Downland sky above dry summer grass.",
-    ventnorNotes:
-      "The dry golden grass of the Isle of Wight downland grounds the act of mental clarity in a recognisable local landscape; the smoke traces the unseen hand's arrival from beyond the frame.",
-    learningTarotUrl: "https://www.learntarot.com/s1.htm",
-    sourceImages: [
-      {
-        src: "sources/swords01-background.png",
-        label: "Background photo",
-        alt: "Dry summer downland grass and clear blue sky used for the Ace of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/swords01.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Ace of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords02: {
-    summary:
-      "Two of Swords is a pause at a hard choice: blocked feeling, careful neutrality, and the need to decide without yet seeing the full picture.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure sits blindfolded with crossed swords before water and a crescent moon — stalemate held in balance. The Ventnor version keeps that seated cross and the moon while placing the figure on a real Ventnor shoreline.",
-    ventnorNotes:
-      "The shore photograph keeps the sea and open sky literal, so the stalemate reads as a local coastal moment rather than a studio allegory.",
-    learningTarotUrl: "https://www.learntarot.com/s2.htm",
-    sourceImages: [
-      {
-        src: "sources/swords02-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor shoreline photograph used for the Two of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59674722222223,
-          longitude: -1.187438888888889,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/swords02.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Two of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords03: {
-    summary:
-      "Three of Swords is heartbreak and clear-eyed sorrow: pain acknowledged outright, grief without disguise, and the sharp truth that cuts through illusion.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows a heart pierced by three swords under rain and cloud — sorrow made stark and unmistakable. The Ventnor version keeps that three-sword heart as the sole subject, rendered as a real blackwork tattoo rather than a floating emblem.",
-    ventnorNotes:
-      "The photograph of the heart-and-swords tattoo is the whole card: no invented rain or landscape, just the ink on skin as the local, literal Three of Swords.",
-    peopleContext:
-      "The source photograph is the tattoo itself (arm and adjacent ink), approved as the card artwork rather than a separate people reference.",
-    learningTarotUrl: "https://www.learntarot.com/s3.htm",
-    sourceImages: [
-      {
-        src: "sources/swords03-background.png",
-        label: "Background photo",
-        alt: "Original Three of Swords tattoo photograph used for the Three of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/swords03.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Three of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords04: {
-    summary:
-      "Four of Swords is rest and recovery: a deliberate pause after conflict, sanctuary, and quiet recovery before the next move.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith knight lies in prayer on a tomb beneath three wall-mounted swords, with a fourth along the tomb and a stained-glass window of blessing in the upper left. The Ventnor version keeps that repose, the 3+1 sword arrangement, and the sanctuary window while placing the scene in a real church interior.",
-    ventnorNotes:
-      "The photographed stained-glass window (three lancets and rose) and stone walls ground the rest in a recognisable Ventnor church rather than a painted chapel; modern clutter was cleared so the knight and swords read clearly.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/s4.htm",
-    sourceImages: [
-      {
-        src: "sources/swords04-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor church interior photograph used for the Four of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/swords04.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Four of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords07: {
-    summary:
-      "Seven of Swords is cunning and strategic retreat: taking what you can carry, leaving the rest, and slipping away before anyone notices.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure steals away from a camp with five swords, glancing back at the two he has left planted — triumph at distance, risk still in view. The Ventnor version keeps that loaded departure and backward glance while placing the scene in the backstage lanes of a real festival ground.",
-    ventnorNotes:
-      "The Ventnor Fringe festival grounds — parched grass, vendor tents, festival flags, and the warm glow of a summer evening — give the getaway a local setting: someone slipping out through the back of the Fringe with more than they arrived with.",
-    learningTarotUrl: "https://www.learntarot.com/s7.htm",
-    sourceImages: [
-      {
-        src: "sources/swords07-background.png",
-        label: "Background photo",
-        alt: "Original Ventnor Fringe festival grounds photograph used for the Seven of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/swords07.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Seven of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords08: {
-    summary:
-      "Eight of Swords is mental imprisonment and self-imposed restriction: a figure bound and blindfolded, surrounded by swords, who could walk free if only they removed the blindfold.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure stands blindfolded and rope-bound among eight swords planted in muddy ground — a castle looms behind. The Ventnor version keeps the bound and blindfolded figure and the ring of swords while placing the scene at the rocky tidal shore below the Ventnor signal station.",
-    ventnorNotes:
-      "The tidal pool, moss-covered boulders, stone retaining wall, and white weatherboard observation tower ground the card in a recognisable Ventnor coastal location.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/s8.htm",
-    sourceImages: [
-      {
-        src: "sources/swords08-background.png",
-        label: "Background photo",
-        alt: "Rocky tidal shore below the Ventnor signal station, Isle of Wight",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-    ],
-  },
-  swords10: {
-    summary:
-      "Ten of Swords is the absolute low point: total defeat, betrayal, rock bottom — yet also the dawn that can only come after the darkest night and the beginning of acceptance.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure lies face-down with ten swords planted in their back, a red cloak spread beneath them, dark stormy sky above, and a thin golden glow at the horizon over still water — the worst is over precisely because nothing worse is possible. The Ventnor version keeps the prone figure, the arc of tall swords, the red and golden fabric, and the sea horizon.",
-    ventnorNotes:
-      "A wooden artist's mannequin on the Ventnor shingle beach stands in for the fallen figure, keeping the scene photographic and the symbolism intact — ten long swords rising into the Isle of Wight sky above the calm Solent.",
-    learningTarotUrl: "https://www.learntarot.com/s10.htm",
-    sourceImages: [
-      {
-        src: "sources/swords10-background.png",
-        label: "Background photo",
-        alt: "Ventnor shingle beach with rounded boulders and clear blue sky over the Solent",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-    ],
-  },
-  swords12: {
-    summary:
-      "Knight of Swords is fierce clarity in motion: bold action, sharp intellect, and the courage to charge forward without hesitation.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Knight charges full-gallop on a white horse, sword raised overhead, cape streaming — driven, urgent, and cutting through all obstacles. The Ventnor version keeps that charging energy, raised sword, and red cape on a real Isle of Wight downland hillside.",
-    ventnorNotes:
-      "The chalk-and-dry-grass downland slope with its narrow path and scrubby trees places the charge on recognisable Ventnor downland rather than the RWS painted sky.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/skn.htm",
-    sourceImages: [
-      {
-        src: "sources/swords12-background.png",
-        label: "Background photo",
-        alt: "Chalk downland hillside photograph used for the Knight of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/swords12.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Knight of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords13: {
-    summary:
-      "Queen of Swords is clear-eyed perception and honest judgment: a mind unclouded by sentiment, experience that has sharpened into wisdom, and the authority to speak truth without flinching.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith queen sits on an ornate stone throne decorated with cherubs and butterflies, facing right. She holds a straight sword upright in her right hand while her left hand is raised open — both receptive and commanding. A single bird soars above. The Ventnor version keeps the enthroned queen, the upright sword, the open hand, and the soaring bird while placing the scene on the open downland above Ventnor.",
-    ventnorNotes:
-      "The wide Isle of Wight downland sky and rolling grass hillside give the queen an unobstructed view — fitting for a court card whose power is clarity of sight.",
-    learningTarotUrl: "https://www.learntarot.com/sq.htm",
-    sourceImages: [
-      {
-        src: "sources/swords13-background.png",
-        label: "Background photo",
-        alt: "Rolling Isle of Wight downland hillside with clear blue sky used for the Queen of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/swords13.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Queen of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  swords14: {
-    summary:
-      "King of Swords is authoritative intellect and clear command: a mind that cuts through confusion, weighs all evidence, and delivers judgment without compromise.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith king sits on a stone throne decorated with butterfly and crescent-moon carvings, facing slightly left. He holds a single sword upright in his right hand. A pale sky with white clouds fills the background; small trees stand at the lower edges; two birds are visible in the upper sky. The Ventnor version keeps the enthroned king, the upright sword, and the carved stone throne while placing the scene on the open downland above Ventnor.",
-    ventnorNotes:
-      "The vast Ventnor Downs sky and golden dry-grass hillside give the king an elevated, commanding position — fitting for a court card whose power is analytical authority and decisive judgment.",
-    learningTarotUrl: "https://www.learntarot.com/sk.htm",
-    sourceImages: [
-      {
-        src: "sources/swords14-background.png",
-        label: "Background photo",
-        alt: "Ventnor Downs hillside with golden summer grass, scattered green trees, and deep blue sky used for the King of Swords",
-        kind: "background",
-        credit: "Christopher Gutteridge",
-      },
-      {
-        src: "rider-waite/swords14.png",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith King of Swords reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands04: {
-    summary:
-      "Four of Wands is celebration and homecoming: a threshold crossed, community gathered, and a moment of shared joy under a festive canopy.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card frames two celebrants with raised flowers beneath a floral garland hung between four wands, with a castle and gathering beyond. The Ventnor version keeps that gateway of four wands and the raised bouquets while placing the scene under a real festival tent.",
-    ventnorNotes:
-      "The red tent canopy, scalloped fringe, and garden path keep the celebration local and outdoor — a Ventnor Fringe gateway rather than a castle courtyard.",
-    peopleContext:
-      "Exception: the source photograph includes the two figures who appear on the finished card, and is approved for the site for that reason. People-reference photos are not published for other cards.",
-    learningTarotUrl: "https://www.learntarot.com/w4.htm",
-    sourceImages: [
-      {
-        src: "sources/wands04-background.jpg",
-        label: "Source photo (place and figures)",
-        alt: "Original festival tent photograph with the two celebrants used for the Four of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.592172222222224,
-          longitude: -1.2168166666666669,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/wands04.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Four of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands05: {
-    summary:
-      "Five of Wands is rivalry and scramble: competing aims, noisy effort, and the heat of contest before anyone has clearly won.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows five youths clashing with sprouting staves in a tangled mock-battle — conflict of energy rather than a finished fight. The Ventnor version keeps that five-figure, five-wand scramble and costume colour language while placing the fray on a real coastal hillside.",
-    ventnorNotes:
-      "The cliff-edge photograph — dry grass, cracked asphalt, mid path, scrub line, and pale sea horizon — grounds the rivalry on a recognisable Ventnor overlook rather than a painted field.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/w5.htm",
-    sourceImages: [
-      {
-        src: "sources/wands05-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor coastal hillside photograph used for the Five of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands05.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Five of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands06: {
-    summary:
-      "Six of Wands is public victory: recognition after effort, a parade of success, and the confidence of being seen and celebrated.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith rider wears a laurel wreath and carries a wreathed wand through a crowd of raised staves — triumph acknowledged aloud. The Ventnor version keeps that horseman and six-wand count while placing the procession in a real street carnival, with the horse facing along the parade.",
-    ventnorNotes:
-      "The Ventnor parade photograph — high-street buildings, marching band in red, and vintage bus under overcast sky — grounds the victory ride in a local carnival; the rectified master extends the near pavement so the wand-bearers stand full-length on UK paving slabs.",
-    peopleContext:
-      "Exception: the source photograph is a public parade with spectators, and is approved for the site as the card's place background. Additional parade figures on the finished card are treated as non-identifying participants.",
-    learningTarotUrl: "https://www.learntarot.com/w6.htm",
-    sourceImages: [
-      {
-        src: "sources/wands06-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor parade street photograph used for the Six of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands06.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Six of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands08: {
-    summary:
-      "Eight of Wands is swift movement: news arriving, momentum gathering, and the sense that events are already in flight toward their destination.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith card shows eight sprouting wands flying diagonally through open sky above a landscape — no figures, only speed and direction. The Ventnor version keeps that eight-wand flight and clear-sky emphasis over a real local hillside.",
-    ventnorNotes:
-      "The hillside photograph and open blue sky give the flight a Ventnor backdrop; the wands match the deck's living bark-and-bud language.",
-    learningTarotUrl: "https://www.learntarot.com/w8.htm",
-    sourceImages: [
-      {
-        src: "sources/wands08-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor hillside photograph used for the Eight of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.597011111111115,
-          longitude: -1.218952777777778,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/wands08.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Eight of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands09: {
-    summary:
-      "Nine of Wands is hard-won resilience: standing guard after struggle, wounded but still watchful, and refusing to drop the line you have held.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith defender leans on one living wand before a fence of eight others, bandage around the head — endurance after battle. The Ventnor version keeps that nine-wand count, planted row, and weary sentinel while placing him on a real Ventnor coastal terrace.",
-    ventnorNotes:
-      "The stone-walled beach terrace photograph — pebbles, sea wall, hillside houses, and clear sky — grounds the watch in a recognisable Ventnor shore rather than a painted hillside.",
-    learningTarotUrl: "https://www.learntarot.com/w9.htm",
-    sourceImages: [
-      {
-        src: "sources/wands09-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor coastal terrace photograph used for the Nine of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands09.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Nine of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands10: {
-    summary:
-      "Ten of Wands is overburden: too much carried at once, responsibility piled high, and the hard walk toward a finish that still feels distant.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith figure hunches under a bundle of ten living staves, face buried in the load, walking toward a distant town — effort without ease. The Ventnor version keeps that burdened pose and exact ten-wand count while setting the walk on dry festival grass before a real pink-and-white big top.",
-    ventnorNotes:
-      "The pink-and-white circus tent photograph — magenta fabric, metal truss, and parched grass under clear blue sky — grounds the burden in a Ventnor Fringe field rather than an allegorical road.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/w10.htm",
-    sourceImages: [
-      {
-        src: "sources/wands10-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor pink-and-white circus tent photograph used for the Ten of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands10.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Ten of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands11: {
-    summary:
-      "Page of Wands is eager spark: a message of adventure, creative curiosity, and the first step toward something fiery and new.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Page stands in a desert landscape in profile, gazing up a tall living wand with both hands on the shaft — yellow salamander tunic, cape, feathered cap, and orange hose. The Ventnor version keeps that upward look, living staff with green shoots, and costume language while placing the Page on a real pebbly shore under clear sky.",
-    ventnorNotes:
-      "The reddish pebble beach and open blue sky photograph ground the Page's restless attention in a recognisable Ventnor foreshore rather than a painted desert of pyramids.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/wpg.htm",
-    sourceImages: [
-      {
-        src: "sources/wands11-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor pebbly shore photograph used for the Page of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands11.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Page of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands12: {
-    summary:
-      "Knight of Wands is bold momentum: adventurous energy, fearless forward motion, and the courage to charge ahead with creative fire.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Knight rides a rearing chestnut horse across a desert, holding a sprouting wand aloft — yellow salamander surcoat, full plate armour, and a flame-red plumed helmet. The Ventnor version keeps that dynamic rearing pose, living staff, and costume while placing the knight on the rough shingle shore at Ventnor.",
-    ventnorNotes:
-      "The rough natural shingle beach with rock-armour breakwater, calm blue sea, and wooded headland photograph replace the RWS desert with a recognisable Ventnor foreshore.",
-    peopleContext:
-      "Figures are treated as non-identifying local participants in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/wkn.htm",
-    sourceImages: [
-      {
-        src: "sources/wands12-background.png",
-        label: "Background photo",
-        alt: "Original Ventnor shingle beach photograph used for the Knight of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands12.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Knight of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands13: {
-    summary:
-      "Queen of Wands is confident warmth: courage, charisma, and the ability to hold a room with directness, humour, and steady creative fire.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith Queen sits on a lion-throne with a sunflower, a sprouting wand, and a black cat at her feet — bold, sunny, and self-possessed. The Ventnor version keeps that seated authority and the cat while translating the throne and setting onto a real sandy Ventnor bank.",
-    ventnorNotes:
-      "The shell-strewn beach and green hillside photograph place the queen outdoors in local daylight rather than on an allegorical dais.",
-    learningTarotUrl: "https://www.learntarot.com/wqn.htm",
-    sourceImages: [
-      {
-        src: "sources/wands13-background.png",
-        label: "Background photo",
-        alt: "Original Ventnor sandy bank photograph used for the Queen of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-        location: {
-          latitude: 50.59854444444445,
-          longitude: -1.1830166666666668,
-          source: "exif",
-        },
-      },
-      {
-        src: "rider-waite/wands13.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith Queen of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-  wands14: {
-    summary:
-      "King of Wands is visionary leadership: bold direction, creative fire held with authority, and the will to turn inspiration into decisive action.",
-    riderWaiteNotes:
-      "The Rider-Waite-Smith King sits on a salamander-and-lion throne holding a living wand, with a small lizard at his feet — passionate rule tempered by alert instinct. The Ventnor version keeps that seated king, sprouting staff, and lizard companion while using German army boots and a real Ventnor Wall Lizard on the sand.",
-    ventnorNotes:
-      "The pebble-sand beach with vegetated cliff, breakwater, and sea photograph seats the throne in a recognisable Ventnor foreshore rather than a painted blue void.",
-    peopleContext:
-      "The figure is treated as a non-identifying local participant in the scene.",
-    learningTarotUrl: "https://www.learntarot.com/wkg.htm",
-    sourceImages: [
-      {
-        src: "sources/wands14-background.jpg",
-        label: "Background photo",
-        alt: "Original Ventnor sandy foreshore photograph with cliff and sea used for the King of Wands",
-        kind: "background",
-        credit: "Christopher Gutteridge and friends",
-      },
-      {
-        src: "rider-waite/wands14.jpg",
-        label: "Rider-Waite reference",
-        alt: "Rider-Waite-Smith King of Wands reference card",
-        kind: "rider-waite",
-        credit: "Rider-Waite-Smith reference",
-      },
-    ],
-  },
-};
+  "maj00": {
+    "summary": "The Fool is the first step: innocence, trust, and setting out without knowing where the path will lead.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Fool walks toward a cliff with a rose, a bindle on a staff, and a small dog at his heels — blissful, unselfconscious, and ready to begin. The Ventnor version keeps that upward gaze, cliff edge, rose, staff, and leaping dog on a real coastal path.",
+    "ventnorNotes": "This is the cliff between Flowersbrook and Steephill Cove. The Fool is a Ventnor Resident and the Dog I met in the Cantina",
+    "learningTarotUrl": "https://www.learntarot.com/maj00.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj00-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor coastal cliff photograph used for The Fool",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.590383333333335,
+          "longitude": -1.2186055555555557,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj00.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Fool reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj02": {
+    "summary": "The High Priestess is quiet knowing: intuition, hidden knowledge, and the threshold between what is shown and what is kept behind the veil.",
+    "riderWaiteNotes": "The Rider-Waite-Smith High Priestess sits between the pillars of Boaz and Jachin with the TORA scroll, lunar crown, crescent at her feet, and a pomegranate veil arranged as the Tree of Life — still, receptive, and inward. The Ventnor version keeps that seated balance, pillars, scroll, and veil on a real shingle beach.",
+    "ventnorNotes": "A simple Ventnor Beach background. The figure is based on a Ventnor musician.",
+    "learningTarotUrl": "https://www.learntarot.com/maj02.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj02-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor shingle beach photograph used for The High Priestess",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.593180555555556,
+          "longitude": -1.2074916666666666,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj02.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The High Priestess reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj03": {
+    "summary": "The Empress is abundance made visible: nurture, fertility, sensual comfort, and the ease of a world that can grow and feed what it loves.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Empress sits among wheat and water with a star crown, pomegranate gown, scepter, and Venus shield — maternal authority rooted in nature. The Ventnor version keeps that seated abundance, wheat sheaf, Venus heart, and scepter while placing her under a real stone arch.",
+    "ventnorNotes": "The background is the iconic Cascade. The figure is a member of the Ventnor Fringe staff.",
+    "learningTarotUrl": "https://www.learntarot.com/maj03.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj03-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor stone archway photograph used for The Empress",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.593269444444445,
+          "longitude": -1.2047027777777777,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj03.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Empress reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj01": {
+    "summary": "The Magician is focused will made visible: gathering the means at hand, channelling intention, and the moment when thought becomes action.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Magician stands with one hand raised and one pointing down, the lemniscate above his head, and the four suit emblems on the table before him — as above, so below. The Ventnor version keeps that upright gesture, infinity symbol, and tool arrangement while translating the emblems into the deck's local objects.",
+    "ventnorNotes": "The background is the wall opposite the entrance to the Botanical Gardens. The bench is a Ventnor Fringe bench. The figure is one of the performers from Ventnor Fringe, who told old italian stories about the Tarot.",
+    "learningTarotUrl": "https://www.learntarot.com/maj01.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj01-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor stone wall photograph used for The Magician",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Road by the Botanic Gardens",
+          "latitude": 50.5901,
+          "longitude": -1.2266,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/maj01.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Magician reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj04": {
+    "summary": "The Emperor is structure and authority: stable rule, fatherly order, and the power to hold a boundary so that life inside it can grow.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Emperor sits on a stone throne with ram heads, ankh scepter, and orb — armored under red robes, crowned, and facing the viewer with uncompromising presence. The Ventnor version keeps that seated dominion, four rams, ankh, and orb while casting a real local sitter into the role.",
+    "ventnorNotes": "The rocky background is at Steephill Cove. The figure is a member of the Ventnor Fringe staff.",
+    "learningTarotUrl": "https://www.learntarot.com/maj04.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj04-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor rocky beach photograph used for The Emperor",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.58867777777778,
+          "longitude": -1.224175,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj04.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Emperor reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj05": {
+    "summary": "The Hierophant is shared teaching and tradition: blessing, initiation, and the living hand-off of meaning from one generation to the next.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Hierophant sits between pillars with a papal tiara, triple cross, blessing hand, two kneeling initiates (roses and lilies), and crossed keys. The Ventnor version keeps that structure while casting a real local sitter into the role.",
+    "ventnorNotes": "The doorway is the side of Trinity Church. The figure is a man from Brighton who was visiting Ventnor.",
+    "learningTarotUrl": "https://www.learntarot.com/maj05.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj05-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor stone church doorway photograph used for The Hierophant",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.596161111111115,
+          "longitude": -1.2173277777777778,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj05.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Hierophant reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj06": {
+    "summary": "The Lovers is choice and union: attraction, aligned values, and the moment when two paths become one decision.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Lovers places a man and woman beneath a blessing angel, with the Tree of Knowledge (and serpent) behind her and the Tree of Life's twelve flames behind him, and a mountain between them. The Ventnor version keeps that blessing structure, dual trees, and central mound while dressing the couple in beach swimwear on a real shore.",
+    "ventnorNotes": "Finding a 'mound' was a challenge so I cheated a bit. This is just Ventnor beach and everything else is generated",
+    "learningTarotUrl": "https://www.learntarot.com/maj06.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj06-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor pebble beach photograph used for The Lovers",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59317777777778,
+          "longitude": -1.2074888888888888,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj06.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Lovers reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj07": {
+    "summary": "The Chariot is directed will: momentum under control, opposing forces yoked, and the drive to move forward without losing the reins.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Chariot shows a crowned warrior in a canopy chariot drawn by black and white sphinxes, with starry canopy, crescent moons, and wand in hand. The Ventnor version keeps that dual harness and charioteer authority while translating the vehicle into a real vintage bus.",
+    "ventnorNotes": "The bus is the Book Bus from Ventnor Fringe festival. The background is Ventnor High Street. The driver is actually one of the Book Bus people, not the offical driver.",
+    "learningTarotUrl": "https://www.learntarot.com/maj07.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj07-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor steep street photograph used for The Chariot",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59648611111111,
+          "longitude": -1.2008527777777778,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj07.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Chariot reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups01": {
+    "summary": "Ace of Cups is the open heart: new feeling, generosity, intuition, and the first overflow of love or creativity.",
+    "ventnorNotes": "Bonchurch Pond",
+    "learningTarotUrl": "https://www.learntarot.com/ca.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups01-background.png",
+        "label": "Background photo",
+        "alt": "Original Ventnor garden pond photograph used for the Ace of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59917777777778,
+          "longitude": -1.190336111111111,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/cups01.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Ace of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups02": {
+    "summary": "A card about meeting another person as an equal: shared feeling, truce, attraction, and the moment when two separate lives decide to face one another directly.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card centres on two figures exchanging cups beneath the winged lion and caduceus. The Ventnor version keeps the direct face-to-face structure and the sense of charged agreement, while translating the cups into the deck's Ventnor Fringe pint-cup language.",
+    "ventnorNotes": "Ventnor residents and their cats. They have two cats so I had to include the second one in the bottom of the picture to avoid feline drama. The background and figures are largely unaltered.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/c2.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups02-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor background photograph used for the Two of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.598735,
+          "longitude": -1.2153,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/cups02.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Two of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups03": {
+    "summary": "Three of Cups is celebration and friendship: shared joy, community toasting together, and the ease of belonging in a moment of abundance.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows three figures raising cups in a circle amid a harvest of fruit — fellowship, revelry, and mutual support. The Ventnor version keeps that toasting trio and harvest mood while placing the scene in front of a real circus tent.",
+    "ventnorNotes": "The red-and-silver big top and dry grass make the revel feel like a Ventnor Fringe afternoon: circus performers toasting in costume rather than a painted orchard dance.",
+    "peopleContext": "Exception: the source photograph includes the three figures who appear on the finished card, and is approved for the site for that reason. People-reference photos are not published for other cards.",
+    "learningTarotUrl": "https://www.learntarot.com/c3.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups03-background.jpg",
+        "label": "Source photo (place and figures)",
+        "alt": "Original circus-tent photograph with the three celebrants used for the Three of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Flowersbrook",
+          "latitude": 50.59064,
+          "longitude": -1.21878,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups03.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Three of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups04": {
+    "summary": "Four of Cups is apathy and withdrawal: boredom with what is already in front of you, and a reluctance to notice the new offer arriving from outside.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure sits with folded arms beneath a tree, three cups on the ground and a fourth offered from a cloud — dissatisfied, inward, and not yet ready to receive. The Ventnor version keeps that seated refusal and cup count while placing the scene on a real shingle beach.",
+    "ventnorNotes": "The beach photograph and wooden groyne make the stalemate feel local and sunlit rather than allegorical; the Fringe pint cups keep the suit language in the town's own register.",
+    "learningTarotUrl": "https://www.learntarot.com/c4.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups04-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor shingle beach photograph used for the Four of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59294166666667,
+          "longitude": -1.2096583333333333,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/cups04.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Four of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups05": {
+    "summary": "Five of Cups is loss and regret: grief fixed on what has spilled, while what remains upright goes unnoticed behind you.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure stands cloaked and bowed before three overturned cups, with two still standing at their back and a bridge beyond. The Ventnor version keeps that mourning stance and cup count while translating the vessels into Ventnor Fringe pint cups — beer still in the upright pair, spilled from the fallen three.",
+    "ventnorNotes": "The Cascade arched plaza — stone-and-brick viaduct, circular paving, and bright coastal light — gives the lament a recognisable Ventnor setting; benches were cleared from the paving so the figure and cups can read cleanly.",
+    "learningTarotUrl": "https://www.learntarot.com/c5.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups05-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor Cascade plaza photograph used for the Five of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.593269444444445,
+          "longitude": -1.2047027777777777,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/cups05.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Five of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups06": {
+    "summary": "Six of Cups is nostalgia and simple kindness: childhood memory, a gift freely offered, and the warmth of looking back without bitterness.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows an older child offering a flower-filled cup to a smaller child, with six cups in total arranged around a village courtyard. The Ventnor version keeps that tender exchange and cup count while translating the vessels into Ventnor Fringe pint cups filled with white flowers.",
+    "ventnorNotes": "The real stone church courtyard — wall, bench, rose windows, and downhill street — grounds the reminiscence in a recognisable Ventnor place rather than a painted village.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/c6.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups06-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor church courtyard photograph used for the Six of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "St. Catherines School",
+          "latitude": 50.59614,
+          "longitude": -1.20766,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups06.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Six of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups07": {
+    "summary": "Seven of Cups is fantasy and choice: many glittering options, each a wish or illusion, and the hard work of picking one path.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure faces seven cups rising from clouds, each holding a different vision — head, shrouded spirit, snake, castle, jewels, laurel and skull, dragon. The Ventnor version keeps that choice-array and translates every vessel into a Ventnor Fringe pint cup with single-colour festival line-art for the visions.",
+    "ventnorNotes": "The coastal path overlooking Ventnor and the sea makes the daydream feel local and sunlit; the floating Fringe cups turn the visions into festival ephemera rather than golden chalices.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/c7.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups07-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor coastal path photograph used for the Seven of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Littleton Down",
+          "latitude": 50.60171,
+          "longitude": -1.20064,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups07.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Seven of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups08": {
+    "summary": "Eight of Cups is walking away: leaving what is unfinished or unsatisfying, and turning toward a harder, quieter path.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure in a red cloak abandons eight cups arranged with a deliberate gap, walking toward rocky ground under a faced moon. The Ventnor version keeps that departure, the incomplete cup stack, the staff, and the moon-face while translating the vessels into Ventnor Fringe pint cups.",
+    "ventnorNotes": "The real boulder beach under clear sky grounds the leave-taking in Ventnor stone and shingle rather than painted mountains; the faced crescent keeps the nocturnal omen in daylight.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/c8.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups08-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor rocky beach photograph used for the Eight of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Steephill Cove",
+          "latitude": 50.58872,
+          "longitude": -1.2241,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups08.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Eight of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups09": {
+    "summary": "Nine of Cups is satisfaction: wishes granted for a moment, contentment displayed, and the quiet pride of having enough.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure sits arms crossed before a curved bank of nine cups, smiling in fulfilled pleasure. The Ventnor version keeps that satisfied pose and the nine-vessel display while translating every cup into a Ventnor Fringe pint with single-colour festival line-art and varied print facing.",
+    "ventnorNotes": "The Fringe tent bar interior grounds the feast in festival hospitality: full poured pints on the bar behind a seated host, under yellow-and-red canopy rather than a painted banquet hall.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/c9.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups09-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor Fringe tent bar photograph used for the Nine of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Fringe Bar, Flowersbrook",
+          "latitude": 50.59081,
+          "longitude": -1.21866,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups09.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Nine of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups10": {
+    "summary": "Ten of Cups is lasting emotional fulfillment: family harmony, a home blessed, and the joy of true wealth — love and belonging rather than material gain.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a couple with raised arms and two dancing children beneath a rainbow carrying ten cups. The Ventnor version keeps that family celebration, rainbow geometry, and ten-vessel count while translating every cup into a Ventnor Fringe pint with varied print facing along the arc.",
+    "ventnorNotes": "The hillside garden photograph — pond, path, and houses under open sky — grounds the domestic blessing in a recognisable Ventnor place; the luminous rainbow crowns the home rather than a painted pastoral.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/c10.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups10-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor hillside garden photograph used for the Ten of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Ventnor Park Stream",
+          "latitude": 50.59232,
+          "longitude": -1.21668,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups10.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Ten of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands01": {
+    "summary": "Ace of Wands is the spark of initiative: a new enterprise, creative fire, and the courage to begin before the path is fully known.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Ace shows a hand emerging from a cloud gripping a living wand with fresh shoots and floating leaves — pure potential offered from beyond. The Ventnor version keeps that hand-from-cloud offer and living branch language against a clear Ventnor sky.",
+    "ventnorNotes": "The sunny dry hillside photograph, cropped to a thin ground strip under open blue sky, keeps the Ace spare and local: inspiration over Ventnor downland rather than a painted castle landscape.",
+    "learningTarotUrl": "https://www.learntarot.com/wa.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands01-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor hillside photograph used for the Ace of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Bonchurch Downs",
+          "latitude": 50.6045,
+          "longitude": -1.19032,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands01.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Ace of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands02": {
+    "summary": "Two of Wands is foresight and choice: the world held in hand, a plan surveyed from higher ground, and the courage to step beyond the familiar wall.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure stands on battlements between two living wands — one held, one fixed to the wall — looking outward while cradling a globe. The Ventnor version keeps that rear three-quarter pose, globe, rose-and-lily wall emblem, and the right wand clamped to the parapet near top and bottom.",
+    "ventnorNotes": "The elevated Ventnor seafront terrace — stone parapet, metal rail, Spyglass hillside, red garden beds, beach and bay — makes the survey of possibilities feel local: dominion and decision over a real Isle of Wight shoreline rather than a painted castle view.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/w2.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands02-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor seafront terrace photograph used for the Two of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Above the Cascade",
+          "latitude": 50.59368,
+          "longitude": -1.20472,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands02.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Two of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups11": {
+    "summary": "Page of Cups is imaginative message and open-hearted curiosity: a surprise from the feelings, a creative spark, and willingness to listen to something unexpected.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Page stands by the sea in a blue tunic with floral motifs, one hand on hip, gazing at a fish rising from a single cup — youthful, receptive, and slightly astonished. The Ventnor version keeps that pose, blue chaperon, pink accents, and the fish-from-cup omen while placing the Page on a real Ventnor promenade.",
+    "ventnorNotes": "The esplanade photograph — black railing, paved walkway, and open sea under soft cloud — grounds the Page's quiet surprise in a recognisable Ventnor shoreline rather than a painted shore.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/cpg.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups11-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor esplanade photograph used for the Page of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59313055555556,
+          "longitude": -1.2064694444444444,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/cups11.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Page of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups12": {
+    "summary": "Knight of Cups is romantic offer and imaginative pursuit: feeling led by the heart, bringing a proposal or invitation, and moving toward beauty rather than force.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Knight rides a pale horse in quiet forward motion, holding a single cup — poetic, receptive, and deliberate rather than charging. The Ventnor version keeps that calm stride and fish-patterned tunic while translating the vessel into a Ventnor Fringe pint cup and leaving the rider bareheaded in glasses.",
+    "ventnorNotes": "The garden photograph — dry lawn, dense shrubs, and the forked light-barked tree — grounds the romantic messenger in a recognisable Ventnor place rather than a painted desert stream.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/ckn.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups12-background.png",
+        "label": "Background photo",
+        "alt": "Original Ventnor garden photograph used for the Knight of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "The Brook, Flowersbrook",
+          "latitude": 50.591,
+          "longitude": -1.21892,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups12.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Knight of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups13": {
+    "summary": "Queen of Cups is deep feeling and quiet intuition: emotional clarity held with care, compassion that listens, and a calm centre beside the water.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Queen sits on a carved throne at the shore, gazing into an ornate closed cup — contemplative, receptive, and wholly absorbed. The Ventnor version keeps that seaside throne and focused study of the vessel while translating the cup into a Ventnor Fringe plastic pint.",
+    "ventnorNotes": "The shingle beach photograph — foam line, pebble shore, and hillside town under bright sun — grounds the Queen in a recognisable Ventnor coast; the shell-backed stone throne and water-patterned cloak keep the water-court language local and ceremonial.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/cq.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups13-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor beach photograph used for the Queen of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Ventnor Beach",
+          "latitude": 50.59316,
+          "longitude": -1.20872,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups13.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Queen of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "cups14": {
+    "summary": "King of Cups is emotional mastery: calm authority over feeling, compassion without being swept away, and steady counsel in the midst of turbulence.",
+    "riderWaiteNotes": "The Rider-Waite-Smith King sits composed on a throne amid the sea, holding a cup and short scepter, with a leaping fish and distant ship — mastery of emotion rather than denial of it. The Ventnor version keeps that sea-throne calm and fish-pendant symbolism while translating the vessel into a Ventnor Fringe plastic pint and the leaping fish into a dolphin.",
+    "ventnorNotes": "The open-sea photograph — level horizon, pale sky, and gentle ripples — grounds the King in recognisable Ventnor water rather than a painted grey void; the stone throne and Fringe cup keep court and festival in the same frame.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/ckg.htm",
+    "sourceImages": [
+      {
+        "src": "sources/cups14-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor open-sea photograph used for the King of Cups",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Ventnor Bay",
+          "latitude": 50.59313,
+          "longitude": -1.2085,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/cups14.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith King of Cups reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj10": {
+    "summary": "Wheel of Fortune is the turn of events: luck, reversal, timing, and the feeling that a larger pattern has suddenly become visible.",
+    "riderWaiteNotes": "The Rider-Waite-Smith design is built around the wheel, four surrounding emblems, and the sense of motion above ordinary human control. The Ventnor card keeps the circular mechanism and replaces the eagle with a seagull, matching the deck's rule for localising that symbol.",
+    "ventnorNotes": "The Ventnor street-clock facade — stone wall, flanking windows, and ornate surround — makes chance feel public and local: time fixed on a real building rather than a painted sky. The shop signage below the ledge is cropped out of the official background.",
+    "learningTarotUrl": "https://www.learntarot.com/maj10.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj10-background.jpg",
+        "label": "Background photo",
+        "alt": "Ventnor street-clock facade photograph used for Wheel of Fortune (shop signage cropped out)",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.595308333333335,
+          "longitude": -1.2057277777777777,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj10.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Wheel of Fortune reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj12": {
+    "summary": "The Hanged Man is voluntary pause: surrender, a new perspective, and the quiet insight that comes from stopping rather than forcing the next step.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure hangs upside down by one ankle in a living tau cross, other leg crossed in a four, arms behind the back, with a radiant halo — calm, not struggling. The Ventnor version keeps that pose, living crossbeam, and halo on a real harbour mast.",
+    "ventnorNotes": "The weathered wooden mast, metal base, and Spireless Cup yard place the sacrifice and inversion in a recognisable Ventnor outdoor setting rather than an empty allegorical ground.",
+    "learningTarotUrl": "https://www.learntarot.com/maj12.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj12-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor harbour mast yard photograph used for The Hanged Man",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.593022222222224,
+          "longitude": -1.2100638888888888,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj12.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Hanged Man reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj13": {
+    "summary": "Death is unavoidable transformation: the ending of one chapter so another can begin, the skeleton that passes through every station of life and bows to none of them.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Death rides a white horse in black armour, carrying a black flag bearing a white five-petalled rose. A king lies fallen, a bishop prays, a young woman turns away, and a child holds up flowers — only the child looks directly at the rider. Behind them the sun rises between two towers. The Ventnor version keeps the armoured skeleton, white horse, black rose banner, the four supplicants, and the twin towers — here the St Boniface Down radio masts — in the golden sunset light.",
+    "ventnorNotes": "The dry hillside above Ventnor sets the scene on recognisable Isle of Wight terrain: the two St Boniface Down masts stand in for Rider-Waite's twin towers as the sun rises (or sets) between them, making transformation feel rooted in the island's own skyline.",
+    "learningTarotUrl": "https://www.learntarot.com/maj13.htm",
+    "sourceImages": [
+      {
+        "src": "rider-waite/maj13.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Death reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj16": {
+    "summary": "The Tower is sudden upheaval: structures breaking, false security struck down, and the hard clarity that comes when something unsustainable finally falls.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a tower struck by lightning, a crown blasted free, fire at the summit, and two figures falling headfirst — catastrophe as revelation. The Ventnor version keeps that lightning strike, falling crown, flames, and dual fallers on a real local building.",
+    "ventnorNotes": "The Ventnor Botanic Garden entrance tower photograph grounds the disaster in a recognisable place: white glass cylinder, agapanthus planter, and storm-dark sky instead of an allegorical mountain peak.",
+    "learningTarotUrl": "https://www.learntarot.com/maj16.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj16-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor Botanic Garden entrance photograph used for The Tower",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.593716666666666,
+          "longitude": -1.2046944444444443,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj16.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Tower reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj17": {
+    "summary": "The Star is hope after hardship: calm renewal, quiet faith, and the sense that inspiration can refill what was emptied.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Star shows a kneeling woman pouring from two vessels into water and onto land beneath one large star and seven smaller ones, with a bird on a tree. The Ventnor version keeps that pour pose, eight stars, and seagull-on-bush while casting a real local sitter — black dress, tattoos kept.",
+    "ventnorNotes": "The coastal pool photograph replaces painted landscape with a recognisable Ventnor edge-of-sea hollow, graded day-for-night like The Moon and The Hermit.",
+    "learningTarotUrl": "https://www.learntarot.com/maj17.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj17-background.jpg",
+        "label": "Background photo",
+        "alt": "Daytime Ventnor coastal pool photograph used for The Star",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Flowersbrook Pond",
+          "latitude": 50.59064,
+          "longitude": -1.2178,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/maj17.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Star reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj08": {
+    "summary": "Strength is gentle courage: calm mastery of force, patience under pressure, and the quiet confidence to meet something fierce without becoming fierce yourself.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a woman closing a lion's mouth with quiet hands, an infinity above her head, and a floral crown and sash. The Ventnor version keeps that compassionate control and the lemniscate while placing the encounter on real downland.",
+    "ventnorNotes": "The hillside photograph makes the encounter feel local and daylight-ordinary: open fields and sky behind a still, trusting lion.",
+    "learningTarotUrl": "https://www.learntarot.com/maj08.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj08-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor downland photograph used for Strength",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.60329166666667,
+          "longitude": -1.2073555555555555,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj08.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Strength reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj09": {
+    "summary": "The Hermit is solitude and inner guidance: stepping aside from the crowd, carrying your own light, and finding what only quiet looking can reveal.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Hermit stands alone on a peak with a lantern (Seal of Solomon) and staff, hooded and withdrawn. The Ventnor version keeps that solitary lantern-and-staff stance while casting a real local sitter into the role — hood down, sunglasses kept.",
+    "ventnorNotes": "The night gravel hillside with its distant communications tower replaces painted mountains with a real Ventnor edge-of-town quiet, graded day-for-night like The Moon and The Star.",
+    "learningTarotUrl": "https://www.learntarot.com/maj09.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj09-background.jpg",
+        "label": "Background photo",
+        "alt": "Night Ventnor hillside photograph used for The Hermit",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59422222222222,
+          "longitude": -1.2081055555555555,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj09.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Hermit reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj11": {
+    "summary": "Justice is clear judgment: weighing what is fair, facing consequences, and holding a decision with an even hand.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Justice sits between pillars with an upright sword and balanced scales, crowned and robed in red. The Ventnor version keeps that symmetrical seat of judgment while casting a real local sitter into the role — sunglasses and makeup kept, crown added.",
+    "ventnorNotes": "The stone steps and hoop-top railing photograph replace the painted throne-room with a real outdoor threshold; pillars and a red drape stage the formal seat of judgment on those steps.",
+    "learningTarotUrl": "https://www.learntarot.com/maj11.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj11-background.jpg",
+        "label": "Background photo",
+        "alt": "Stone steps and railing photograph used for Justice",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59249722222223,
+          "longitude": -1.2159888888888888,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj11.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Justice reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj15": {
+    "summary": "The Devil is bondage and appetite: the chains we could slip, the shadow we feed, and the bright exit we ignore while staring at the pedestal.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Devil perches on a block with raised hand and torch, while two horned figures stand chained below with grape and flame tails. The Ventnor version keeps that structure as a bronze sculpture installation — clothed attendants, loose ceremonial chains, grape-tail and living fire-tail.",
+    "ventnorNotes": "The coastal tunnel photograph replaces painted blackness with a real dark passage opening onto grey sea, so temptation and exit share one frame.",
+    "learningTarotUrl": "https://www.learntarot.com/maj15.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj15-background.jpg",
+        "label": "Background photo",
+        "alt": "Coastal tunnel photograph used for The Devil",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Tunnel under Botanic Gardens",
+          "latitude": 50.58733,
+          "longitude": -1.22868,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/maj15.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Devil reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj18": {
+    "summary": "The Moon is uncertainty and intuition: half-seen truths, animal instinct, and the path that must be walked by feel rather than by daylight.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Moon hangs with a face and rays above yods, a dog and wolf, twin towers, and a crayfish rising from water. The Ventnor version keeps that night symbolism while casting local radio towers as the twin pillars and a live European lobster in the stream.",
+    "ventnorNotes": "The garden stream photograph stays recognisable under day-for-night grade; Ventnor radio towers replace painted stone towers, and the lobster is Homarus gammarus — the blue-black common lobster potters land around the Island.",
+    "learningTarotUrl": "https://www.learntarot.com/maj18.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj18-background.jpg",
+        "label": "Background photo",
+        "alt": "Stream and garden photograph used for The Moon",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59246944444445,
+          "longitude": -1.2159583333333333,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj18.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith The Moon reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "maj19": {
+    "summary": "The Sun is clarity and warmth: simple joy, vitality, and the feeling that things are openly, unmistakably good.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card centres on a large sun, a pale horse, and a joyful child with a red banner among sunflowers. The Ventnor version keeps that buoyant structure while translating the rider and horse into toy scale in a real garden.",
+    "ventnorNotes": "The garden photograph keeps the card local and everyday: hoop fence, marigolds, and raised planters stand in for the traditional wall of sunflowers, under an enlarged faceless sun.",
+    "learningTarotUrl": "https://www.learntarot.com/maj19.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj19-background.jpg",
+        "label": "Background photo",
+        "alt": "Original garden photograph used for The Sun",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.592105555555555,
+          "longitude": -1.217213888888889,
+          "source": "exif"
+        }
+      }
+    ]
+  },
+  "maj20": {
+    "summary": "Judgement is awakening and reckoning: a call to rise, review what has been, and step into a clearer next life.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows an angel with trumpet and St George banner calling figures up from graves. The Ventnor version keeps that trumpet call, clean cross banner, and rising figures while casting a recognisable local angel over a real cemetery.",
+    "ventnorNotes": "The hillside graveyard and chapel photograph ground the resurrection scene in a local place; the angel keeps her red sunglasses, fire hair, and pendant as the card's living signal.",
+    "learningTarotUrl": "https://www.learntarot.com/maj20.htm",
+    "sourceImages": [
+      {
+        "src": "sources/maj20-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor hillside cemetery photograph used for Judgement",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59685555555556,
+          "longitude": -1.21635,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/maj20.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Judgement reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents01": {
+    "summary": "Ace of Pentacles is a tangible beginning: opportunity, prosperity, and the first seed of something solid taking root in the material world.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a hand emerging from cloud to offer a single pentacle over a garden path and archway. The Ventnor version keeps that offering gesture, sky-dominant composition, and garden threshold while using the deck's fixed Ventnor souvenir pentacle.",
+    "ventnorNotes": "The park photograph with its vine-covered arch and dry summer lawn grounds the gift in a real local place; natural mist at the wrist replaces the carved cloud without losing the sense of something offered from beyond the everyday.",
+    "learningTarotUrl": "https://www.learntarot.com/pa.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents01-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor park and garden arch photograph used for the Ace of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.58891666666667,
+          "longitude": -1.2268444444444446,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/pents01.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Ace of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents02": {
+    "summary": "Two of Pentacles is balance under pressure: keeping two demands in motion, adapting to change, and staying light enough to continue.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a figure juggling two pentacles inside an infinity loop, with ships rising and falling behind. The Ventnor version keeps the paired pentacles and rhythmic balancing act while using the deck's fixed pentacle design.",
+    "ventnorNotes": "The local background gives the card a coastal instability: movement, weather, and changing ground make the act of balance feel practical rather than abstract.",
+    "learningTarotUrl": "https://www.learntarot.com/p2.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents02-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor background photograph used for the Two of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59286388888889,
+          "longitude": -1.2058888888888888,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/pents02.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Two of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents03": {
+    "summary": "Three of Pentacles is skilled collaboration: craft meeting plan, shared standards, and work that improves because more than one person cares about the result.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a craftsperson on a bench with two planners beneath a carved triad of pentacles — labour, design, and patronage in one frame. The Ventnor version keeps that three-person review around a hanging triad while using the deck's fixed Ventnor souvenir pentacles.",
+    "ventnorNotes": "The festival tent, red pole, and wrought-iron arch turn the workshop into a local Fringe build: the blueprint, mallet, and hanging coins make collaboration feel practical and place-specific rather than cathedral-bound.",
+    "peopleContext": "Exception: the source photograph includes the two figures who appear on the finished card (with a third planner added for the RWS triad), and is approved for the site as both place and figure source. People-reference photos are not published for other cards.",
+    "learningTarotUrl": "https://www.learntarot.com/p3.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents03-background.jpg",
+        "label": "Source photo (place and figures)",
+        "alt": "Original festival tent photograph with the two figures used for the Three of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Fringe Bar, Ventnor Park",
+          "latitude": 50.59214,
+          "longitude": -1.21698,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents03.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Three of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents04": {
+    "summary": "Four of Pentacles is holding on: security, possession, and the tight grip that keeps what you have close — sometimes too close.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a seated figure clutching one pentacle to the chest, with one on the crown and one under each foot — a closed circuit of material control. The Ventnor version keeps that possessive four-coin structure while using the deck's fixed Ventnor souvenir pentacles.",
+    "ventnorNotes": "A stone seat against a dense local hedge grounds the hoarding pose in a real Ventnor place; the trucker hat stands in for the crown, and the flat coin balanced on it reads as a precarious party trick rather than a carved royal emblem.",
+    "learningTarotUrl": "https://www.learntarot.com/p4.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents04-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor hedge and pavement photograph used for the Four of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Car park by the Telephone Exchange",
+          "latitude": 50.59621,
+          "longitude": -1.20202,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents04.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Four of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents05": {
+    "summary": "Five of Pentacles is hardship outside the warm light: exclusion, material worry, and the cold walk past help that may still be near.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows two impoverished figures trudging through snow past a glowing stained-glass window of five pentacles — need framed against sanctuary. The Ventnor version keeps that winter passage and five-coin window while using the deck's fixed Ventnor souvenir pentacles.",
+    "ventnorNotes": "The pale ashlar facade with matched white sash windows grounds the scene in a recognisable Ventnor street; winter night and stained glass turn one window into the five-coin sanctuary while a partial neighbour window stays decorative only.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/p5.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents05-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor street facade photograph used for the Five of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Church Street",
+          "latitude": 50.59461,
+          "longitude": -1.20651,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents05.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Five of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents06": {
+    "summary": "Six of Pentacles is charity and fair exchange: giving or receiving with balance, and the measured flow of resources between those who have and those who need.",
+    "riderWaiteNotes": "The Rider-Waite-Smith merchant stands with balanced scales, dropping coins to one kneeling beggar while another waits — generosity weighed as well as offered. The Ventnor version keeps that three-figure charity scene and six floating coins while using the deck's fixed Ventnor souvenir pentacles.",
+    "ventnorNotes": "The Trinity Road gravel and stone house photograph grounds the exchange in a recognisable Ventnor place; the hillside and clear sky keep the scene sunlit and local rather than a painted grey void.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/p6.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents06-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor Trinity Road photograph used for the Six of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Trinity Churchyard",
+          "latitude": 50.59751,
+          "longitude": -1.19703,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents06.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Six of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents07": {
+    "summary": "Seven of Pentacles is patience after labour: pausing to assess what has grown, whether to wait longer, and the long view of effort already invested.",
+    "riderWaiteNotes": "The Rider-Waite-Smith labourer leans on his hoe beside a vine bearing six pentacles, with a seventh on the ground — harvest contemplated rather than taken. The Ventnor version keeps that paused assessment, six coins in the bush and one at his feet, while using the deck's fixed Ventnor souvenir pentacles.",
+    "ventnorNotes": "The dry-field photograph with the left gorse bush, golden grass, and clear blue sky over distant hills grounds the pause in a real Ventnor place; the bush stands in for the vine without inventing a different landscape.",
+    "peopleContext": "The figure is treated as a non-identifying local participant in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/p7.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents07-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor dry-field photograph with gorse bush used for the Seven of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends"
+      },
+      {
+        "src": "rider-waite/pents07.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Seven of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents08": {
+    "summary": "Eight of Pentacles is skilled diligence: focused craft, repetition that builds mastery, and work taken seriously enough to improve.",
+    "riderWaiteNotes": "The Rider-Waite-Smith apprentice sits at a bench engraving a pentacle, with six finished coins displayed on a post and one on the ground — labour in progress. The Ventnor version keeps that seated craftsman, vertical display of finished work, and eight-coin count while using the deck's fixed Ventnor souvenir pentacles.",
+    "ventnorNotes": "The park photograph under the tree — with the wooden bench, trunk, and orange frame beyond — grounds the workshop in a real Ventnor place; shade and sunlit lawn keep the craft local rather than a painted void.",
+    "learningTarotUrl": "https://www.learntarot.com/p8.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents08-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor park photograph with bench and tree used for the Eight of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Bench in Ventnor Park",
+          "latitude": 50.59206,
+          "longitude": -1.21732,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents08.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Eight of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents09": {
+    "summary": "Nine of Pentacles is earned ease: self-reliance, cultivated abundance, and the quiet confidence of someone who can enjoy the garden they have grown.",
+    "riderWaiteNotes": "The Rider-Waite-Smith noble stands in a vineyard with a bird on a gloved hand, six pentacles on the left (one under her touch) and three on the right — cultivated wealth held lightly. The Ventnor version keeps that garden pose, falconry glove, and 6+3 coin layout while using the deck's fixed Ventnor souvenir pentacles; sunglasses rest on her head in place of a formal cap.",
+    "ventnorNotes": "The garden photograph — paved path, low stone wall, and agapanthus beds — grounds her ease in a recognisable Ventnor place rather than a painted vineyard; the snail at her feet keeps the RWS detail local and literal.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/p9.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents09-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor garden photograph with agapanthus and stone wall used for the Nine of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.589297,
+          "longitude": -1.230433,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/pents09.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Nine of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents10": {
+    "summary": "Ten of Pentacles is lasting wealth: family legacy, rooted security, and the abundance that holds across generations.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows an elder with dogs before an archway, a couple and child beyond, and ten pentacles arranged as the Tree of Life — inheritance made visible. The Ventnor version keeps that multi-generational gathering, arch passage, and Sephiroth coin layout while using the deck's fixed Ventnor souvenir pentacles.",
+    "ventnorNotes": "The High Street flint arch photograph — bay window, bargeboard trim, and the street sign above the passage — turns the RWS gateway into a recognisable Ventnor entrance, so legacy reads as local and literal rather than a painted estate.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/p10.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents10-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor High Street flint-arch photograph used for the Ten of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Arch by Boots",
+          "latitude": 50.59507,
+          "longitude": -1.20577,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents10.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Ten of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents11": {
+    "summary": "Page of Pentacles is practical potential: a new skill, a tangible opportunity, and careful attention to something that could grow into real substance.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Page stands in a field studying a single pentacle held in both hands — curious, grounded, and focused on what the coin might become. The Ventnor version keeps that contemplative pose and the red Page hat while using the deck's fixed Ventnor souvenir pentacle.",
+    "ventnorNotes": "The downland photograph places the study of opportunity against open Isle of Wight fields and a distant sea horizon, so the Page's attention feels local and literal rather than allegorical.",
+    "learningTarotUrl": "https://www.learntarot.com/ppg.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents11-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor downland photograph used for the Page of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.604725,
+          "longitude": -1.1941833333333334,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/pents11.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Page of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents12": {
+    "summary": "Knight of Pentacles is steady work: patience, reliability, and careful progress toward something solid rather than a dramatic charge.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Knight sits still on a dark horse holding a single pentacle — methodical, grounded, and unhurried. The Ventnor version keeps that stationary pose and the leafy helm detail while using the deck's fixed Ventnor souvenir pentacle.",
+    "ventnorNotes": "The downland path photograph places the knight's deliberate pace on a real Ventnor track under open blue sky, so diligence feels local and literal.",
+    "learningTarotUrl": "https://www.learntarot.com/pkn.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents12-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor downland path photograph used for the Knight of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.60226388888889,
+          "longitude": -1.2143944444444443,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/pents12.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Knight of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents13": {
+    "summary": "Queen of Pentacles is grounded abundance: practical care, nurture of what is real and valuable, and quiet prosperity rooted in place.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Queen sits on a carved stone throne cradling a single pentacle, with a rose bower overhead and a rabbit at her feet — nurturing attention to the material world. The Ventnor version keeps that seated study of the coin, floral canopy, and rabbit while using the deck's fixed Ventnor souvenir pentacle.",
+    "ventnorNotes": "The chalk-downland photograph — yellow wildflowers, scrub bands, rolling hills, and distant sea under clear blue sky — grounds the Queen in a recognisable Ventnor hillside rather than a painted yellow void.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/pq.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents13-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor chalk-downland photograph with yellow wildflowers used for the Queen of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Luccombe Down",
+          "latitude": 50.61026,
+          "longitude": -1.19352,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents13.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Queen of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "pents14": {
+    "summary": "King of Pentacles is established prosperity: steady mastery of the material world, reliable authority, and wealth rooted in care for land and livelihood.",
+    "riderWaiteNotes": "The Rider-Waite-Smith King sits on a bull-carved throne holding a scepter and a single pentacle, robed in grapevines — grounded material success. The Ventnor version keeps that seated authority, bull motifs, orb-topped scepter, and grape robe while using the deck's fixed Ventnor souvenir pentacle.",
+    "ventnorNotes": "The hotel, variegated hedge, stone retaining wall, and sloping road photograph seats the throne against a recognisable Ventnor street frontage under overcast sky rather than a painted yellow void.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/pkg.htm",
+    "sourceImages": [
+      {
+        "src": "sources/pents14-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor hotel, hedge, stone wall and sloping road photograph used for the King of Pentacles",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Outside the Royal Hotel",
+          "latitude": 50.59384,
+          "longitude": -1.21152,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/pents14.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith King of Pentacles reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords01": {
+    "summary": "Ace of Swords is the pure force of mind and truth: a breakthrough, a decisive clarity, and the power of an idea whose moment has come.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a disembodied hand emerging from cloud on the left, holding a longsword upright, crowned with a gold crown hung with laurel and a palm frond, yods raining down. The Ventnor version keeps the triumphant vertical sword, the crowned blade, and the yods while replacing the grey clouds with realistic wisps of smoke and setting the scene against a clear blue Downland sky above dry summer grass.",
+    "ventnorNotes": "The dry golden grass of the Isle of Wight downland grounds the act of mental clarity in a recognisable local landscape; the smoke traces the unseen hand's arrival from beyond the frame.",
+    "learningTarotUrl": "https://www.learntarot.com/s1.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords01-background.png",
+        "label": "Background photo",
+        "alt": "Dry summer downland grass and clear blue sky used for the Ace of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends"
+      },
+      {
+        "src": "rider-waite/swords01.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Ace of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords02": {
+    "summary": "Two of Swords is a pause at a hard choice: blocked feeling, careful neutrality, and the need to decide without yet seeing the full picture.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure sits blindfolded with crossed swords before water and a crescent moon — stalemate held in balance. The Ventnor version keeps that seated cross and the moon while placing the figure on a real Ventnor shoreline.",
+    "ventnorNotes": "The shore photograph keeps the sea and open sky literal, so the stalemate reads as a local coastal moment rather than a studio allegory.",
+    "learningTarotUrl": "https://www.learntarot.com/s2.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords02-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor shoreline photograph used for the Two of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59674722222223,
+          "longitude": -1.187438888888889,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/swords02.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Two of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords03": {
+    "summary": "Three of Swords is heartbreak and clear-eyed sorrow: pain acknowledged outright, grief without disguise, and the sharp truth that cuts through illusion.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows a heart pierced by three swords under rain and cloud — sorrow made stark and unmistakable. The Ventnor version keeps that three-sword heart as the sole subject, rendered as a real blackwork tattoo rather than a floating emblem.",
+    "ventnorNotes": "The photograph of the heart-and-swords tattoo is the whole card: no invented rain or landscape, just the ink on skin as the local, literal Three of Swords.",
+    "peopleContext": "The source photograph is the tattoo itself (arm and adjacent ink), approved as the card artwork rather than a separate people reference.",
+    "learningTarotUrl": "https://www.learntarot.com/s3.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords03-background.png",
+        "label": "Background photo",
+        "alt": "Original Three of Swords tattoo photograph used for the Three of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends"
+      },
+      {
+        "src": "rider-waite/swords03.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Three of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords04": {
+    "summary": "Four of Swords is rest and recovery: a deliberate pause after conflict, sanctuary, and quiet recovery before the next move.",
+    "riderWaiteNotes": "The Rider-Waite-Smith knight lies in prayer on a tomb beneath three wall-mounted swords, with a fourth along the tomb and a stained-glass window of blessing in the upper left. The Ventnor version keeps that repose, the 3+1 sword arrangement, and the sanctuary window while placing the scene in a real church interior.",
+    "ventnorNotes": "The photographed stained-glass window (three lancets and rose) and stone walls ground the rest in a recognisable Ventnor church rather than a painted chapel; modern clutter was cleared so the knight and swords read clearly.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/s4.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords04-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor church interior photograph used for the Four of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Trinity Church",
+          "latitude": 50.59758,
+          "longitude": -1.19682,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/swords04.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Four of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords07": {
+    "summary": "Seven of Swords is cunning and strategic retreat: taking what you can carry, leaving the rest, and slipping away before anyone notices.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure steals away from a camp with five swords, glancing back at the two he has left planted — triumph at distance, risk still in view. The Ventnor version keeps that loaded departure and backward glance while placing the scene in the backstage lanes of a real festival ground.",
+    "ventnorNotes": "The Ventnor Fringe festival grounds — parched grass, vendor tents, festival flags, and the warm glow of a summer evening — give the getaway a local setting: someone slipping out through the back of the Fringe with more than they arrived with.",
+    "learningTarotUrl": "https://www.learntarot.com/s7.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords07-background.png",
+        "label": "Background photo",
+        "alt": "Original Ventnor Fringe festival grounds photograph used for the Seven of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Ventnor Putting Green",
+          "latitude": 50.59286,
+          "longitude": -1.21421,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/swords07.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Seven of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords08": {
+    "summary": "Eight of Swords is mental imprisonment and self-imposed restriction: a figure bound and blindfolded, surrounded by swords, who could walk free if only they removed the blindfold.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure stands blindfolded and rope-bound among eight swords planted in muddy ground — a castle looms behind. The Ventnor version keeps the bound and blindfolded figure and the ring of swords while placing the scene at the rocky tidal shore below the Ventnor signal station.",
+    "ventnorNotes": "The tidal pool, moss-covered boulders, stone retaining wall, and white weatherboard observation tower ground the card in a recognisable Ventnor coastal location.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/s8.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords08-background.png",
+        "label": "Background photo",
+        "alt": "Rocky tidal shore below the Ventnor signal station, Isle of Wight",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Steephill Cove",
+          "latitude": 50.58864,
+          "longitude": -1.22294,
+          "source": "manual"
+        }
+      }
+    ]
+  },
+  "swords10": {
+    "summary": "Ten of Swords is the absolute low point: total defeat, betrayal, rock bottom — yet also the dawn that can only come after the darkest night and the beginning of acceptance.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure lies face-down with ten swords planted in their back, a red cloak spread beneath them, dark stormy sky above, and a thin golden glow at the horizon over still water — the worst is over precisely because nothing worse is possible. The Ventnor version keeps the prone figure, the arc of tall swords, the red and golden fabric, and the sea horizon.",
+    "ventnorNotes": "A wooden artist's mannequin on the Ventnor shingle beach stands in for the fallen figure, keeping the scene photographic and the symbolism intact — ten long swords rising into the Isle of Wight sky above the calm Solent.",
+    "learningTarotUrl": "https://www.learntarot.com/s10.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords10-background.png",
+        "label": "Background photo",
+        "alt": "Ventnor shingle beach with rounded boulders and clear blue sky over the Solent",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Ventnor Bay (offshore)",
+          "latitude": 50.59272,
+          "longitude": -1.20708,
+          "source": "manual"
+        }
+      }
+    ]
+  },
+  "swords12": {
+    "summary": "Knight of Swords is fierce clarity in motion: bold action, sharp intellect, and the courage to charge forward without hesitation.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Knight charges full-gallop on a white horse, sword raised overhead, cape streaming — driven, urgent, and cutting through all obstacles. The Ventnor version keeps that charging energy, raised sword, and red cape on a real Isle of Wight downland hillside.",
+    "ventnorNotes": "The chalk-and-dry-grass downland slope with its narrow path and scrubby trees places the charge on recognisable Ventnor downland rather than the RWS painted sky.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/skn.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords12-background.png",
+        "label": "Background photo",
+        "alt": "Chalk downland hillside photograph used for the Knight of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Ventnor Down above the Industrial Estate",
+          "latitude": 50.59794,
+          "longitude": -1.20753,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/swords12.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Knight of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords13": {
+    "summary": "Queen of Swords is clear-eyed perception and honest judgment: a mind unclouded by sentiment, experience that has sharpened into wisdom, and the authority to speak truth without flinching.",
+    "riderWaiteNotes": "The Rider-Waite-Smith queen sits on an ornate stone throne decorated with cherubs and butterflies, facing right. She holds a straight sword upright in her right hand while her left hand is raised open — both receptive and commanding. A single bird soars above. The Ventnor version keeps the enthroned queen, the upright sword, the open hand, and the soaring bird while placing the scene on the open downland above Ventnor.",
+    "ventnorNotes": "The wide Isle of Wight downland sky and rolling grass hillside give the queen an unobstructed view — fitting for a court card whose power is clarity of sight.",
+    "learningTarotUrl": "https://www.learntarot.com/sq.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords13-background.png",
+        "label": "Background photo",
+        "alt": "Rolling Isle of Wight downland hillside with clear blue sky used for the Queen of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "The Downs",
+          "latitude": 50.60071,
+          "longitude": -1.20369,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/swords13.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Queen of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "swords14": {
+    "summary": "King of Swords is authoritative intellect and clear command: a mind that cuts through confusion, weighs all evidence, and delivers judgment without compromise.",
+    "riderWaiteNotes": "The Rider-Waite-Smith king sits on a stone throne decorated with butterfly and crescent-moon carvings, facing slightly left. He holds a single sword upright in his right hand. A pale sky with white clouds fills the background; small trees stand at the lower edges; two birds are visible in the upper sky. The Ventnor version keeps the enthroned king, the upright sword, and the carved stone throne while placing the scene on the open downland above Ventnor.",
+    "ventnorNotes": "The vast Ventnor Downs sky and golden dry-grass hillside give the king an elevated, commanding position — fitting for a court card whose power is analytical authority and decisive judgment.",
+    "learningTarotUrl": "https://www.learntarot.com/sk.htm",
+    "sourceImages": [
+      {
+        "src": "sources/swords14-background.png",
+        "label": "Background photo",
+        "alt": "Ventnor Downs hillside with golden summer grass, scattered green trees, and deep blue sky used for the King of Swords",
+        "kind": "background",
+        "credit": "Christopher Gutteridge",
+        "location": {
+          "name": "The Downs",
+          "latitude": 50.60071,
+          "longitude": -1.20369,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/swords14.png",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith King of Swords reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands04": {
+    "summary": "Four of Wands is celebration and homecoming: a threshold crossed, community gathered, and a moment of shared joy under a festive canopy.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card frames two celebrants with raised flowers beneath a floral garland hung between four wands, with a castle and gathering beyond. The Ventnor version keeps that gateway of four wands and the raised bouquets while placing the scene under a real festival tent.",
+    "ventnorNotes": "The red tent canopy, scalloped fringe, and garden path keep the celebration local and outdoor — a Ventnor Fringe gateway rather than a castle courtyard.",
+    "peopleContext": "Exception: the source photograph includes the two figures who appear on the finished card, and is approved for the site for that reason. People-reference photos are not published for other cards.",
+    "learningTarotUrl": "https://www.learntarot.com/w4.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands04-background.jpg",
+        "label": "Source photo (place and figures)",
+        "alt": "Original festival tent photograph with the two celebrants used for the Four of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.592172222222224,
+          "longitude": -1.2168166666666669,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/wands04.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Four of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands05": {
+    "summary": "Five of Wands is rivalry and scramble: competing aims, noisy effort, and the heat of contest before anyone has clearly won.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows five youths clashing with sprouting staves in a tangled mock-battle — conflict of energy rather than a finished fight. The Ventnor version keeps that five-figure, five-wand scramble and costume colour language while placing the fray on a real coastal hillside.",
+    "ventnorNotes": "The cliff-edge photograph — dry grass, cracked asphalt, mid path, scrub line, and pale sea horizon — grounds the rivalry on a recognisable Ventnor overlook rather than a painted field.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/w5.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands05-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor coastal hillside photograph used for the Five of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Salisbury Gardens",
+          "latitude": 50.59358,
+          "longitude": -1.20266,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands05.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Five of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands06": {
+    "summary": "Six of Wands is public victory: recognition after effort, a parade of success, and the confidence of being seen and celebrated.",
+    "riderWaiteNotes": "The Rider-Waite-Smith rider wears a laurel wreath and carries a wreathed wand through a crowd of raised staves — triumph acknowledged aloud. The Ventnor version keeps that horseman and six-wand count while placing the procession in a real street carnival, with the horse facing along the parade.",
+    "ventnorNotes": "The Ventnor parade photograph — high-street buildings, marching band in red, and vintage bus under overcast sky — grounds the victory ride in a local carnival; the rectified master extends the near pavement so the wand-bearers stand full-length on UK paving slabs.",
+    "peopleContext": "Exception: the source photograph is a public parade with spectators, and is approved for the site as the card's place background. Additional parade figures on the finished card are treated as non-identifying participants.",
+    "learningTarotUrl": "https://www.learntarot.com/w6.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands06-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor parade street photograph used for the Six of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Pier Street",
+          "latitude": 50.59499,
+          "longitude": -1.20591,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands06.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Six of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands08": {
+    "summary": "Eight of Wands is swift movement: news arriving, momentum gathering, and the sense that events are already in flight toward their destination.",
+    "riderWaiteNotes": "The Rider-Waite-Smith card shows eight sprouting wands flying diagonally through open sky above a landscape — no figures, only speed and direction. The Ventnor version keeps that eight-wand flight and clear-sky emphasis over a real local hillside.",
+    "ventnorNotes": "The hillside photograph and open blue sky give the flight a Ventnor backdrop; the wands match the deck's living bark-and-bud language.",
+    "learningTarotUrl": "https://www.learntarot.com/w8.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands08-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor hillside photograph used for the Eight of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.597011111111115,
+          "longitude": -1.218952777777778,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/wands08.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Eight of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands09": {
+    "summary": "Nine of Wands is hard-won resilience: standing guard after struggle, wounded but still watchful, and refusing to drop the line you have held.",
+    "riderWaiteNotes": "The Rider-Waite-Smith defender leans on one living wand before a fence of eight others, bandage around the head — endurance after battle. The Ventnor version keeps that nine-wand count, planted row, and weary sentinel while placing him on a real Ventnor coastal terrace.",
+    "ventnorNotes": "The stone-walled beach terrace photograph — pebbles, sea wall, hillside houses, and clear sky — grounds the watch in a recognisable Ventnor shore rather than a painted hillside.",
+    "learningTarotUrl": "https://www.learntarot.com/w9.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands09-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor coastal terrace photograph used for the Nine of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Steephill Cove",
+          "latitude": 50.58887,
+          "longitude": -1.22344,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands09.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Nine of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands10": {
+    "summary": "Ten of Wands is overburden: too much carried at once, responsibility piled high, and the hard walk toward a finish that still feels distant.",
+    "riderWaiteNotes": "The Rider-Waite-Smith figure hunches under a bundle of ten living staves, face buried in the load, walking toward a distant town — effort without ease. The Ventnor version keeps that burdened pose and exact ten-wand count while setting the walk on dry festival grass before a real pink-and-white big top.",
+    "ventnorNotes": "The pink-and-white circus tent photograph — magenta fabric, metal truss, and parched grass under clear blue sky — grounds the burden in a Ventnor Fringe field rather than an allegorical road.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/w10.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands10-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor pink-and-white circus tent photograph used for the Ten of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Flowersbrook",
+          "latitude": 50.59063,
+          "longitude": -1.21843,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands10.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Ten of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands11": {
+    "summary": "Page of Wands is eager spark: a message of adventure, creative curiosity, and the first step toward something fiery and new.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Page stands in a desert landscape in profile, gazing up a tall living wand with both hands on the shaft — yellow salamander tunic, cape, feathered cap, and orange hose. The Ventnor version keeps that upward look, living staff with green shoots, and costume language while placing the Page on a real pebbly shore under clear sky.",
+    "ventnorNotes": "The reddish pebble beach and open blue sky photograph ground the Page's restless attention in a recognisable Ventnor foreshore rather than a painted desert of pyramids.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/wpg.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands11-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor pebbly shore photograph used for the Page of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Ventnor Beach near the Clock",
+          "latitude": 50.59317,
+          "longitude": -1.20737,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands11.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Page of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands12": {
+    "summary": "Knight of Wands is bold momentum: adventurous energy, fearless forward motion, and the courage to charge ahead with creative fire.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Knight rides a rearing chestnut horse across a desert, holding a sprouting wand aloft — yellow salamander surcoat, full plate armour, and a flame-red plumed helmet. The Ventnor version keeps that dynamic rearing pose, living staff, and costume while placing the knight on the rough shingle shore at Ventnor.",
+    "ventnorNotes": "The rough natural shingle beach with rock-armour breakwater, calm blue sea, and wooded headland photograph replace the RWS desert with a recognisable Ventnor foreshore.",
+    "peopleContext": "Figures are treated as non-identifying local participants in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/wkn.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands12-background.png",
+        "label": "Background photo",
+        "alt": "Original Ventnor shingle beach photograph used for the Knight of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Bonchurch Beach",
+          "latitude": 50.5987,
+          "longitude": -1.18269,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands12.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Knight of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands13": {
+    "summary": "Queen of Wands is confident warmth: courage, charisma, and the ability to hold a room with directness, humour, and steady creative fire.",
+    "riderWaiteNotes": "The Rider-Waite-Smith Queen sits on a lion-throne with a sunflower, a sprouting wand, and a black cat at her feet — bold, sunny, and self-possessed. The Ventnor version keeps that seated authority and the cat while translating the throne and setting onto a real sandy Ventnor bank.",
+    "ventnorNotes": "The shell-strewn beach and green hillside photograph place the queen outdoors in local daylight rather than on an allegorical dais.",
+    "learningTarotUrl": "https://www.learntarot.com/wqn.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands13-background.png",
+        "label": "Background photo",
+        "alt": "Original Ventnor sandy bank photograph used for the Queen of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "latitude": 50.59854444444445,
+          "longitude": -1.1830166666666668,
+          "source": "exif"
+        }
+      },
+      {
+        "src": "rider-waite/wands13.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith Queen of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  },
+  "wands14": {
+    "summary": "King of Wands is visionary leadership: bold direction, creative fire held with authority, and the will to turn inspiration into decisive action.",
+    "riderWaiteNotes": "The Rider-Waite-Smith King sits on a salamander-and-lion throne holding a living wand, with a small lizard at his feet — passionate rule tempered by alert instinct. The Ventnor version keeps that seated king, sprouting staff, and lizard companion while using German army boots and a real Ventnor Wall Lizard on the sand.",
+    "ventnorNotes": "The pebble-sand beach with vegetated cliff, breakwater, and sea photograph seats the throne in a recognisable Ventnor foreshore rather than a painted blue void.",
+    "peopleContext": "The figure is treated as a non-identifying local participant in the scene.",
+    "learningTarotUrl": "https://www.learntarot.com/wkg.htm",
+    "sourceImages": [
+      {
+        "src": "sources/wands14-background.jpg",
+        "label": "Background photo",
+        "alt": "Original Ventnor sandy foreshore photograph with cliff and sea used for the King of Wands",
+        "kind": "background",
+        "credit": "Christopher Gutteridge and friends",
+        "location": {
+          "name": "Bonchurch Beach",
+          "latitude": 50.59862,
+          "longitude": -1.183,
+          "source": "manual"
+        }
+      },
+      {
+        "src": "rider-waite/wands14.jpg",
+        "label": "Rider-Waite reference",
+        "alt": "Rider-Waite-Smith King of Wands reference card",
+        "kind": "rider-waite",
+        "credit": "Rider-Waite-Smith reference"
+      }
+    ]
+  }
+}
+;

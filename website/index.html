@@ -21,7 +21,6 @@
         --sea: #1a3a4a;
         --sea-deep: #0e2430;
         --foam: #c8dde6;
-        --missing: #2a3840;
         --radius-card: 0.55rem;
         --shadow-card: 0 12px 28px rgba(8, 18, 24, 0.35);
         --font-display: "Cormorant Garamond", "Palatino Linotype", Palatino, serif;
@@ -429,16 +428,6 @@
         opacity: 1;
       }
 
-      .card.is-missing .card-frame {
-        background:
-          linear-gradient(160deg, #243840 0%, var(--missing) 55%, #1a282e 100%);
-        box-shadow: 0 8px 20px rgba(8, 18, 24, 0.28);
-      }
-
-      .card.is-missing:hover .card-frame {
-        transform: translateY(-3px);
-      }
-
       .card-caption {
         margin: 0.55rem 0 0;
         font-family: var(--font-display);
@@ -449,10 +438,6 @@
         text-transform: uppercase;
         color: var(--foam);
         opacity: 0.78;
-      }
-
-      .card.is-missing .card-caption {
-        opacity: 0.4;
       }
 
       /* —— Lightbox —— */
@@ -611,7 +596,7 @@
         display: flex;
         justify-content: space-between;
         gap: 1rem;
-        margin-top: 1.25rem;
+        margin-bottom: 1rem;
       }
 
       .lightbox-nav button {
@@ -762,6 +747,7 @@
         <a href="#swords">Swords</a>
         <a href="#cups">Cups</a>
         <a href="#wands">Wands</a>
+        <a href="map.html">Map</a>
       </div>
     </nav>
 
@@ -783,9 +769,7 @@
     <main class="wrap" id="deck"></main>
 
     <footer>
-      <div class="wrap">
-        <p>Missing faces will appear as you finish each card.</p>
-      </div>
+      <div class="wrap"></div>
     </footer>
 
     <div class="lightbox" id="lightbox" hidden>
@@ -798,6 +782,14 @@
             <img class="lightbox-card-image" id="lightbox-img" src="" alt="" />
           </div>
           <div class="lightbox-detail">
+            <div class="lightbox-nav" aria-label="Browse cards">
+              <button type="button" id="lightbox-previous" aria-label="Previous card">
+                ← Previous
+              </button>
+              <button type="button" id="lightbox-next" aria-label="Next card">
+                Next →
+              </button>
+            </div>
             <h2 class="lightbox-title" id="lightbox-title"></h2>
             <p class="lightbox-subtitle" id="lightbox-subtitle"></p>
             <div id="lightbox-notes"></div>
@@ -805,14 +797,6 @@
             <div class="detail-block" id="lightbox-sources-block">
               <h3>Source Images</h3>
               <div class="source-gallery" id="lightbox-sources"></div>
-            </div>
-            <div class="lightbox-nav" aria-label="Browse finished cards">
-              <button type="button" id="lightbox-previous" aria-label="Previous finished card">
-                ← Previous
-              </button>
-              <button type="button" id="lightbox-next" aria-label="Next finished card">
-                Next →
-              </button>
             </div>
           </div>
         </div>
@@ -913,6 +897,13 @@
       /** Directory containing the finished framed card PNGs (relative to this page). */
       const IMAGE_DIR = "cards";
 
+      /**
+       * All 78 cards in canonical deck order (Major Arcana → Pentacles → Swords → Cups → Wands).
+       * Used for deterministic next/previous navigation regardless of image-load state.
+       * @type {Array<{ file: string, name: string, numeral: string }>}
+       */
+      const ALL_CARDS = DECK.sections.flatMap((s) => s.cards);
+
       const CARD_DETAILS = window.CARD_DETAILS ?? {};
       const LEARNING_TAROT_BASE = "https://www.learntarot.com";
 
@@ -974,7 +965,7 @@
           head.className = "suit-head";
           head.innerHTML = `
             <h2>${section.title}</h2>
-            <span class="suit-count" data-section-count="${section.id}">${section.cards.length} cards</span>
+            <span class="suit-count">${section.cards.length} cards</span>
           `;
 
           const grid = document.createElement("div");
@@ -1018,7 +1009,7 @@
         img.decoding = "async";
 
         /**
-         * Marks the tile as finished once its PNG has loaded.
+         * Marks the tile as loaded and syncs the lightbox if a hash deep-link is waiting.
          * @returns {void}
          */
         const markReady = () => {
@@ -1026,32 +1017,13 @@
           btn.dataset.settled = "1";
           img.classList.add("is-loaded");
           btn.classList.add("is-ready");
-          btn.classList.remove("is-missing");
-          updateProgress();
           syncLightboxToHash();
         };
 
-        /**
-         * Marks the tile as unfinished when the PNG is absent (404).
-         * @returns {void}
-         */
-        const markMissing = () => {
-          if (btn.dataset.settled === "1") return;
-          btn.dataset.settled = "1";
-          btn.classList.add("is-missing");
-          btn.classList.remove("is-ready");
-          img.removeAttribute("src");
-          updateProgress();
-        };
-
         img.addEventListener("load", markReady);
-        img.addEventListener("error", markMissing);
 
         // Cached images may already be complete before listeners attach.
-        if (img.complete) {
-          if (img.naturalWidth > 0) markReady();
-          else markMissing();
-        }
+        if (img.complete && img.naturalWidth > 0) markReady();
 
         frame.append(img);
 
@@ -1068,23 +1040,6 @@
         });
 
         return btn;
-      }
-
-      /**
-       * Recounts loaded cards and updates each section's ready count.
-       * @returns {void}
-       */
-      function updateProgress() {
-        for (const section of DECK.sections) {
-          const ready = section.cards.filter((c) => {
-            const el = document.querySelector(`.card[data-file="${c.file}"]`);
-            return el && el.classList.contains("is-ready");
-          }).length;
-          const label = document.querySelector(`[data-section-count="${section.id}"]`);
-          if (label) {
-            label.textContent = `${ready} / ${section.cards.length} complete`;
-          }
-        }
       }
 
       const lightbox = document.getElementById("lightbox");
@@ -1161,9 +1116,8 @@
         renderCardLinks(file);
         renderSourceImages(detail.sourceImages ?? []);
 
-        const hasMultipleCards = document.querySelectorAll(".card.is-ready").length > 1;
-        previousButton.disabled = !hasMultipleCards;
-        nextButton.disabled = !hasMultipleCards;
+        previousButton.disabled = false;
+        nextButton.disabled = false;
       }
 
       /**
@@ -1272,19 +1226,21 @@
       }
 
       /**
-       * Moves the lightbox to the next loaded card in deck order.
+       * Moves the lightbox to the previous or next card in canonical deck order.
+       * Navigation uses ALL_CARDS (the authoritative deck list) so the sequence is
+       * always deterministic and independent of which images happen to be loaded.
        * @param {number} direction - Use -1 for previous or 1 for next.
        * @returns {void}
        */
       function moveLightbox(direction) {
-        const loadedCards = Array.from(document.querySelectorAll(".card.is-ready"));
-        if (loadedCards.length < 2) return;
-
-        const currentIndex = loadedCards.findIndex(
-          (card) => card.dataset.file === lightbox.dataset.currentFile,
+        const currentIndex = ALL_CARDS.findIndex(
+          (c) => c.file === lightbox.dataset.currentFile,
         );
-        const nextIndex = (currentIndex + direction + loadedCards.length) % loadedCards.length;
-        openLightbox(loadedCards[nextIndex]);
+        if (currentIndex === -1) return;
+        const nextIndex = (currentIndex + direction + ALL_CARDS.length) % ALL_CARDS.length;
+        const nextCard = ALL_CARDS[nextIndex];
+        const btn = document.querySelector(`.card[data-file="${nextCard.file}"]`);
+        if (btn) openLightbox(btn);
       }
 
       /**

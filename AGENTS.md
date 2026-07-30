@@ -204,6 +204,14 @@ wands, staves, arrows) in a generated or inspected image. Always ask the user
 to confirm the count before approving, proceeding to the next step, or
 reporting the count as correct.
 
+## Image generation limit
+
+**Never call `GenerateImage` more than 3 times in a single session without stopping for human review.**
+
+After the 3rd generation attempt, stop, show the user what has been tried (file paths of each draft), explain what is not working, and ask how to proceed. Do not attempt a 4th generation until the user explicitly approves a revised approach.
+
+This limit exists because runaway generation loops are expensive and have caused significant unintended costs. If a card genuinely needs more than 3 attempts, the user must consciously choose to continue — never loop autonomously.
+
 ## Human approval requests
 
 Whenever stopping for human approval or asking the human to check a file:
