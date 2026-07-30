@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ventnor Tarot — rectified</title>
+    <style>
+      :root {
+        --ink: #1c1814;
+        --muted: #5c5348;
+        --paper: #f3ebe0;
+        --paper-deep: #e6d9c8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 1.5rem;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background: linear-gradient(165deg, var(--paper) 0%, var(--paper-deep) 100%);
+        min-height: 100vh;
+      }
+
+      h1 {
+        margin: 0 0 0.35rem;
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0 0 1.5rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 1rem;
+        max-width: 63rem;
+      }
+
+      @media (max-width: 52rem) {
+        .grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 30rem) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      a.card {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a.card img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 7 / 12;
+        object-fit: cover;
+        background: #ddd4c6;
+        border: 1px solid rgba(28, 24, 20, 0.12);
+      }
+
+      a.card span {
+        display: block;
+        margin-top: 0.35rem;
+        font-size: 0.8rem;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      a.card:hover img {
+        outline: 2px solid var(--ink);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rectified illustrations</h1>
+    <p>7:12 (700×1200) canonical masters — frameless, crisp, decoration-free. Click a thumbnail to open the full PNG.</p>
+    <div class="grid">
+      <a class="card" href="pents01.png" target="_blank" rel="noopener">
+        <img src="pents01.png" alt="Ace of Pentacles" loading="lazy" />
+        <span>pents01</span>
+      </a>
+      <a class="card" href="pents02.png" target="_blank" rel="noopener">
+        <img src="pents02.png" alt="Two of Pentacles" loading="lazy" />
+        <span>pents02</span>
+      </a>
+      <a class="card" href="pents03.png" target="_blank" rel="noopener">
+        <img src="pents03.png" alt="Three of Pentacles" loading="lazy" />
+        <span>pents03</span>
+      </a>
+      <a class="card" href="pents04.png" target="_blank" rel="noopener">
+        <img src="pents04.png" alt="Four of Pentacles" loading="lazy" />
+        <span>pents04</span>
+      </a>
+      <a class="card" href="pents05.png" target="_blank" rel="noopener">
+        <img src="pents05.png" alt="Five of Pentacles" loading="lazy" />
+        <span>pents05</span>
+      </a>
+      <a class="card" href="pents06.png" target="_blank" rel="noopener">
+        <img src="pents06.png" alt="Six of Pentacles" loading="lazy" />
+        <span>pents06</span>
+      </a>
+      <a class="card" href="pents07.png" target="_blank" rel="noopener">
+        <img src="pents07.png" alt="Seven of Pentacles" loading="lazy" />
+        <span>pents07</span>
+      </a>
+      <a class="card" href="pents08.png" target="_blank" rel="noopener">
+        <img src="pents08.png" alt="Eight of Pentacles" loading="lazy" />
+        <span>pents08</span>
+      </a>
+      <a class="card" href="pents09.png" target="_blank" rel="noopener">
+        <img src="pents09.png" alt="Nine of Pentacles" loading="lazy" />
+        <span>pents09</span>
+      </a>
+      <a class="card" href="pents10.png" target="_blank" rel="noopener">
+        <img src="pents10.png" alt="Ten of Pentacles" loading="lazy" />
+        <span>pents10</span>
+      </a>
+      <a class="card" href="pents11.png" target="_blank" rel="noopener">
+        <img src="pents11.png" alt="Page of Pentacles" loading="lazy" />
+        <span>pents11</span>
+      </a>
+      <a class="card" href="pents12.png" target="_blank" rel="noopener">
+        <img src="pents12.png" alt="Knight of Pentacles" loading="lazy" />
+        <span>pents12</span>
+      </a>
+      <a class="card" href="pents13.png" target="_blank" rel="noopener">
+        <img src="pents13.png" alt="Queen of Pentacles" loading="lazy" />
+        <span>pents13</span>
+      </a>
+      <a class="card" href="pents14.png" target="_blank" rel="noopener">
+        <img src="pents14.png" alt="King of Pentacles" loading="lazy" />
+        <span>pents14</span>
+      </a>
+      <a class="card" href="swords01.png" target="_blank" rel="noopener">
+        <img src="swords01.png" alt="Ace of Swords" loading="lazy" />
+        <span>swords01</span>
+      </a>
+      <a class="card" href="swords02.png" target="_blank" rel="noopener">
+        <img src="swords02.png" alt="Two of Swords" loading="lazy" />
+        <span>swords02</span>
+      </a>
+      <a class="card" href="swords03.png" target="_blank" rel="noopener">
+        <img src="swords03.png" alt="Three of Swords" loading="lazy" />
+        <span>swords03</span>
+      </a>
+      <a class="card" href="swords04.png" target="_blank" rel="noopener">
+        <img src="swords04.png" alt="Four of Swords" loading="lazy" />
+        <span>swords04</span>
+      </a>
+      <a class="card" href="swords05.png" target="_blank" rel="noopener">
+        <img src="swords05.png" alt="Five of Swords" loading="lazy" />
+        <span>swords05</span>
+      </a>
+      <a class="card" href="swords06.png" target="_blank" rel="noopener">
+        <img src="swords06.png" alt="Six of Swords" loading="lazy" />
+        <span>swords06</span>
+      </a>
+      <a class="card" href="swords07.png" target="_blank" rel="noopener">
+        <img src="swords07.png" alt="Seven of Swords" loading="lazy" />
+        <span>swords07</span>
+      </a>
+      <a class="card" href="swords08.png" target="_blank" rel="noopener">
+        <img src="swords08.png" alt="Eight of Swords" loading="lazy" />
+        <span>swords08</span>
+      </a>
+      <a class="card" href="swords09.png" target="_blank" rel="noopener">
+        <img src="swords09.png" alt="Nine of Swords" loading="lazy" />
+        <span>swords09</span>
+      </a>
+      <a class="card" href="swords10.png" target="_blank" rel="noopener">
+        <img src="swords10.png" alt="Ten of Swords" loading="lazy" />
+        <span>swords10</span>
+      </a>
+      <a class="card" href="swords11.png" target="_blank" rel="noopener">
+        <img src="swords11.png" alt="Page of Swords" loading="lazy" />
+        <span>swords11</span>
+      </a>
+      <a class="card" href="swords12.png" target="_blank" rel="noopener">
+        <img src="swords12.png" alt="Knight of Swords" loading="lazy" />
+        <span>swords12</span>
+      </a>
+      <a class="card" href="swords13.png" target="_blank" rel="noopener">
+        <img src="swords13.png" alt="Queen of Swords" loading="lazy" />
+        <span>swords13</span>
+      </a>
+      <a class="card" href="swords14.png" target="_blank" rel="noopener">
+        <img src="swords14.png" alt="King of Swords" loading="lazy" />
+        <span>swords14</span>
+      </a>
+      <a class="card" href="cups01.png" target="_blank" rel="noopener">
+        <img src="cups01.png" alt="Ace of Cups" loading="lazy" />
+        <span>cups01</span>
+      </a>
+      <a class="card" href="cups02.png" target="_blank" rel="noopener">
+        <img src="cups02.png" alt="Two of Cups" loading="lazy" />
+        <span>cups02</span>
+      </a>
+      <a class="card" href="cups03.png" target="_blank" rel="noopener">
+        <img src="cups03.png" alt="Three of Cups" loading="lazy" />
+        <span>cups03</span>
+      </a>
+      <a class="card" href="cups04.png" target="_blank" rel="noopener">
+        <img src="cups04.png" alt="Four of Cups" loading="lazy" />
+        <span>cups04</span>
+      </a>
+      <a class="card" href="cups05.png" target="_blank" rel="noopener">
+        <img src="cups05.png" alt="Five of Cups" loading="lazy" />
+        <span>cups05</span>
+      </a>
+      <a class="card" href="cups06.png" target="_blank" rel="noopener">
+        <img src="cups06.png" alt="Six of Cups" loading="lazy" />
+        <span>cups06</span>
+      </a>
+      <a class="card" href="cups07.png" target="_blank" rel="noopener">
+        <img src="cups07.png" alt="Seven of Cups" loading="lazy" />
+        <span>cups07</span>
+      </a>
+      <a class="card" href="cups08.png" target="_blank" rel="noopener">
+        <img src="cups08.png" alt="Eight of Cups" loading="lazy" />
+        <span>cups08</span>
+      </a>
+      <a class="card" href="cups09.png" target="_blank" rel="noopener">
+        <img src="cups09.png" alt="Nine of Cups" loading="lazy" />
+        <span>cups09</span>
+      </a>
+      <a class="card" href="cups10.png" target="_blank" rel="noopener">
+        <img src="cups10.png" alt="Ten of Cups" loading="lazy" />
+        <span>cups10</span>
+      </a>
+      <a class="card" href="cups11.png" target="_blank" rel="noopener">
+        <img src="cups11.png" alt="Page of Cups" loading="lazy" />
+        <span>cups11</span>
+      </a>
+      <a class="card" href="cups12.png" target="_blank" rel="noopener">
+        <img src="cups12.png" alt="Knight of Cups" loading="lazy" />
+        <span>cups12</span>
+      </a>
+      <a class="card" href="cups13.png" target="_blank" rel="noopener">
+        <img src="cups13.png" alt="Queen of Cups" loading="lazy" />
+        <span>cups13</span>
+      </a>
+      <a class="card" href="cups14.png" target="_blank" rel="noopener">
+        <img src="cups14.png" alt="King of Cups" loading="lazy" />
+        <span>cups14</span>
+      </a>
+      <a class="card" href="wands01.png" target="_blank" rel="noopener">
+        <img src="wands01.png" alt="Ace of Wands" loading="lazy" />
+        <span>wands01</span>
+      </a>
+      <a class="card" href="wands02.png" target="_blank" rel="noopener">
+        <img src="wands02.png" alt="Two of Wands" loading="lazy" />
+        <span>wands02</span>
+      </a>
+      <a class="card" href="wands03.png" target="_blank" rel="noopener">
+        <img src="wands03.png" alt="Three of Wands" loading="lazy" />
+        <span>wands03</span>
+      </a>
+      <a class="card" href="wands04.png" target="_blank" rel="noopener">
+        <img src="wands04.png" alt="Four of Wands" loading="lazy" />
+        <span>wands04</span>
+      </a>
+      <a class="card" href="wands05.png" target="_blank" rel="noopener">
+        <img src="wands05.png" alt="Five of Wands" loading="lazy" />
+        <span>wands05</span>
+      </a>
+      <a class="card" href="wands06.png" target="_blank" rel="noopener">
+        <img src="wands06.png" alt="Six of Wands" loading="lazy" />
+        <span>wands06</span>
+      </a>
+      <a class="card" href="wands07.png" target="_blank" rel="noopener">
+        <img src="wands07.png" alt="Seven of Wands" loading="lazy" />
+        <span>wands07</span>
+      </a>
+      <a class="card" href="wands08.png" target="_blank" rel="noopener">
+        <img src="wands08.png" alt="Eight of Wands" loading="lazy" />
+        <span>wands08</span>
+      </a>
+      <a class="card" href="wands09.png" target="_blank" rel="noopener">
+        <img src="wands09.png" alt="Nine of Wands" loading="lazy" />
+        <span>wands09</span>
+      </a>
+      <a class="card" href="wands10.png" target="_blank" rel="noopener">
+        <img src="wands10.png" alt="Ten of Wands" loading="lazy" />
+        <span>wands10</span>
+      </a>
+      <a class="card" href="wands11.png" target="_blank" rel="noopener">
+        <img src="wands11.png" alt="Page of Wands" loading="lazy" />
+        <span>wands11</span>
+      </a>
+      <a class="card" href="wands12.png" target="_blank" rel="noopener">
+        <img src="wands12.png" alt="Knight of Wands" loading="lazy" />
+        <span>wands12</span>
+      </a>
+      <a class="card" href="wands13.png" target="_blank" rel="noopener">
+        <img src="wands13.png" alt="Queen of Wands" loading="lazy" />
+        <span>wands13</span>
+      </a>
+      <a class="card" href="wands14.png" target="_blank" rel="noopener">
+        <img src="wands14.png" alt="King of Wands" loading="lazy" />
+        <span>wands14</span>
+      </a>
+      <a class="card" href="maj00.png" target="_blank" rel="noopener">
+        <img src="maj00.png" alt="The Fool" loading="lazy" />
+        <span>maj00</span>
+      </a>
+      <a class="card" href="maj01.png" target="_blank" rel="noopener">
+        <img src="maj01.png" alt="The Magician" loading="lazy" />
+        <span>maj01</span>
+      </a>
+      <a class="card" href="maj02.png" target="_blank" rel="noopener">
+        <img src="maj02.png" alt="The High Priestess" loading="lazy" />
+        <span>maj02</span>
+      </a>
+      <a class="card" href="maj03.png" target="_blank" rel="noopener">
+        <img src="maj03.png" alt="The Empress" loading="lazy" />
+        <span>maj03</span>
+      </a>
+      <a class="card" href="maj04.png" target="_blank" rel="noopener">
+        <img src="maj04.png" alt="The Emperor" loading="lazy" />
+        <span>maj04</span>
+      </a>
+      <a class="card" href="maj05.png" target="_blank" rel="noopener">
+        <img src="maj05.png" alt="The Hierophant" loading="lazy" />
+        <span>maj05</span>
+      </a>
+      <a class="card" href="maj06.png" target="_blank" rel="noopener">
+        <img src="maj06.png" alt="The Lovers" loading="lazy" />
+        <span>maj06</span>
+      </a>
+      <a class="card" href="maj07.png" target="_blank" rel="noopener">
+        <img src="maj07.png" alt="The Chariot" loading="lazy" />
+        <span>maj07</span>
+      </a>
+      <a class="card" href="maj08.png" target="_blank" rel="noopener">
+        <img src="maj08.png" alt="Strength" loading="lazy" />
+        <span>maj08</span>
+      </a>
+      <a class="card" href="maj09.png" target="_blank" rel="noopener">
+        <img src="maj09.png" alt="The Hermit" loading="lazy" />
+        <span>maj09</span>
+      </a>
+      <a class="card" href="maj10.png" target="_blank" rel="noopener">
+        <img src="maj10.png" alt="Wheel of Fortune" loading="lazy" />
+        <span>maj10</span>
+      </a>
+      <a class="card" href="maj11.png" target="_blank" rel="noopener">
+        <img src="maj11.png" alt="Justice" loading="lazy" />
+        <span>maj11</span>
+      </a>
+      <a class="card" href="maj12.png" target="_blank" rel="noopener">
+        <img src="maj12.png" alt="The Hanged Man" loading="lazy" />
+        <span>maj12</span>
+      </a>
+      <a class="card" href="maj13.png" target="_blank" rel="noopener">
+        <img src="maj13.png" alt="Death" loading="lazy" />
+        <span>maj13</span>
+      </a>
+      <a class="card" href="maj14.png" target="_blank" rel="noopener">
+        <img src="maj14.png" alt="Temperance" loading="lazy" />
+        <span>maj14</span>
+      </a>
+      <a class="card" href="maj15.png" target="_blank" rel="noopener">
+        <img src="maj15.png" alt="The Devil" loading="lazy" />
+        <span>maj15</span>
+      </a>
+      <a class="card" href="maj16.png" target="_blank" rel="noopener">
+        <img src="maj16.png" alt="The Tower" loading="lazy" />
+        <span>maj16</span>
+      </a>
+      <a class="card" href="maj17.png" target="_blank" rel="noopener">
+        <img src="maj17.png" alt="The Star" loading="lazy" />
+        <span>maj17</span>
+      </a>
+      <a class="card" href="maj18.png" target="_blank" rel="noopener">
+        <img src="maj18.png" alt="The Moon" loading="lazy" />
+        <span>maj18</span>
+      </a>
+      <a class="card" href="maj19.png" target="_blank" rel="noopener">
+        <img src="maj19.png" alt="The Sun" loading="lazy" />
+        <span>maj19</span>
+      </a>
+      <a class="card" href="maj20.png" target="_blank" rel="noopener">
+        <img src="maj20.png" alt="Judgement" loading="lazy" />
+        <span>maj20</span>
+      </a>
+      <a class="card" href="maj21.png" target="_blank" rel="noopener">
+        <img src="maj21.png" alt="The World" loading="lazy" />
+        <span>maj21</span>
+      </a>
+    </div>
+  </body>
+</html>

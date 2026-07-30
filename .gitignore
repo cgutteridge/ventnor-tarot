@@ -1,0 +1,35 @@
+# Do not version working drafts or superseded art
+tmp/
+rejected/
+
+# Image assets outside approved trees (commit non-images only elsewhere)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.tif
+*.tiff
+*.heic
+*.bmp
+
+# Approved image trees: canonical sources + rectified masters only.
+# Everything else (framed/numeralled builds, legacy vtarot/, map tiles,
+# website/cards|sources|rider-waite) is generated or recreatable — do not track.
+!rider-waite/
+!rider-waite/**
+!sources/
+!sources/**
+!illustrations-rectified/
+!illustrations-rectified/**
+
+# Local / OS (after allowlists so these stay excluded)
+.DS_Store
+**/.DS_Store
+.venv/
+**/.venv/
+.tmp/
+*.pyc
+__pycache__/
+*.swp
+.claude/settings.local.json

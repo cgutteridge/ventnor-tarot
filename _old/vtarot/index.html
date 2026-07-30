@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ventnor Tarot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1c1814;
+        --ink-soft: #3a342c;
+        --paper: #f3ebe0;
+        --paper-deep: #e6d9c8;
+        --gold: #b8924a;
+        --gold-soft: #d4b87a;
+        --sea: #1a3a4a;
+        --sea-deep: #0e2430;
+        --foam: #c8dde6;
+        --missing: #2a3840;
+        --radius-card: 0.55rem;
+        --shadow-card: 0 12px 28px rgba(8, 18, 24, 0.35);
+        --font-display: "Cormorant Garamond", "Palatino Linotype", Palatino, serif;
+        --font-body: "Outfit", "Avenir Next", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--paper);
+        font-family: var(--font-body);
+        font-weight: 300;
+        background:
+          radial-gradient(ellipse 90% 60% at 50% -10%, rgba(200, 221, 230, 0.18), transparent 55%),
+          radial-gradient(ellipse 70% 50% at 100% 40%, rgba(184, 146, 74, 0.08), transparent 45%),
+          linear-gradient(165deg, #0a1a22 0%, var(--sea-deep) 38%, #132830 72%, #0c1c24 100%);
+        background-attachment: fixed;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.045;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        z-index: 0;
+      }
+
+      a {
+        color: var(--gold-soft);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--paper);
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 1;
+        width: min(1180px, calc(100% - 2.5rem));
+        margin: 0 auto;
+      }
+
+      /* —— Hero —— */
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        align-content: end;
+        padding: 3rem 0 4.5rem;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(to top, var(--sea-deep) 0%, transparent 42%),
+          linear-gradient(105deg, rgba(14, 36, 48, 0.55) 20%, transparent 70%),
+          url("wands02.png?v=1") center 28% / cover no-repeat;
+        filter: saturate(0.92) brightness(0.72);
+        transform: scale(1.04);
+        animation: hero-drift 28s ease-in-out infinite alternate;
+        z-index: -1;
+      }
+
+      @keyframes hero-drift {
+        from {
+          transform: scale(1.04) translate3d(0, 0, 0);
+        }
+        to {
+          transform: scale(1.08) translate3d(-1.2%, -1%, 0);
+        }
+      }
+
+      .hero-inner {
+        width: min(1180px, calc(100% - 2.5rem));
+        margin: 0 auto;
+        animation: rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(1.25rem);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .brand {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: clamp(3.4rem, 11vw, 7.5rem);
+        line-height: 0.9;
+        letter-spacing: 0.02em;
+        color: var(--paper);
+        text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
+      }
+
+      .brand em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--gold-soft);
+      }
+
+      .lede {
+        margin: 1.1rem 0 0;
+        max-width: 28rem;
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
+        line-height: 1.55;
+        color: var(--foam);
+        opacity: 0.92;
+      }
+
+      .hero-about {
+        margin-top: 1.5rem;
+        max-width: 36rem;
+      }
+
+      .hero-about p {
+        margin: 0 0 1rem;
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+        line-height: 1.6;
+        color: var(--foam);
+        opacity: 0.88;
+      }
+
+      .hero-about p:last-child {
+        margin-bottom: 0;
+      }
+
+      .rules-summary {
+        margin: 0 0 1rem;
+        padding: 0;
+        list-style: none;
+        font-size: clamp(0.9rem, 1.9vw, 1rem);
+        line-height: 1.55;
+        color: var(--foam);
+        opacity: 0.85;
+      }
+
+      .rules-summary li {
+        position: relative;
+        padding-left: 1.1rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .rules-summary li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--gold-soft);
+        opacity: 0.7;
+      }
+
+      .rules-summary strong {
+        font-weight: 500;
+        color: var(--paper);
+      }
+
+      .credits {
+        padding-top: 1rem;
+        margin-top: 0.25rem;
+        border-top: 1px solid rgba(200, 221, 230, 0.15);
+        font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+        opacity: 0.8;
+      }
+
+      .credits strong {
+        font-weight: 500;
+        color: var(--paper);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+        margin-top: 1.75rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.7rem 1.25rem;
+        border: 1px solid rgba(212, 184, 122, 0.55);
+        border-radius: 999px;
+        background: rgba(243, 235, 224, 0.08);
+        color: var(--paper);
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        backdrop-filter: blur(8px);
+        transition:
+          background 0.25s ease,
+          border-color 0.25s ease,
+          transform 0.25s ease;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background: rgba(243, 235, 224, 0.18);
+        border-color: var(--gold-soft);
+        color: var(--paper);
+        transform: translateY(-1px);
+      }
+
+      .btn-ghost {
+        border-color: rgba(200, 221, 230, 0.28);
+        background: transparent;
+      }
+
+      /* —— Nav —— */
+      .deck-nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        padding: 0.85rem 0;
+        background: rgba(14, 36, 48, 0.82);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(200, 221, 230, 0.1);
+      }
+
+      .deck-nav .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1.25rem;
+        align-items: center;
+      }
+
+      .deck-nav a {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--foam);
+        opacity: 0.7;
+        transition: opacity 0.2s ease, color 0.2s ease;
+      }
+
+      .deck-nav a:hover,
+      .deck-nav a:focus-visible {
+        opacity: 1;
+        color: var(--gold-soft);
+      }
+
+      /* —— Card notes intro —— */
+      .notes-intro {
+        padding: 3rem 0 0.75rem;
+      }
+
+      .notes-intro h2 {
+        margin: 0 0 0.65rem;
+        font-family: var(--font-display);
+        font-size: clamp(1.85rem, 4vw, 2.65rem);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .notes-intro p {
+        max-width: 44rem;
+        margin: 0 0 0.85rem;
+        color: var(--foam);
+        font-size: 1rem;
+        line-height: 1.65;
+        opacity: 0.86;
+      }
+
+      /* —— Sections —— */
+      .suit {
+        padding: 3.5rem 0 1rem;
+      }
+
+      .suit-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.5rem 1.5rem;
+        margin-bottom: 1.75rem;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid rgba(184, 146, 74, 0.28);
+      }
+
+      .suit-head h2 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: clamp(1.85rem, 4vw, 2.6rem);
+        letter-spacing: 0.04em;
+        color: var(--paper);
+      }
+
+      .suit-count {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold-soft);
+        opacity: 0.85;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+        gap: 1.15rem 0.95rem;
+      }
+
+      @media (min-width: 720px) {
+        .grid {
+          grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+          gap: 1.4rem 1.1rem;
+        }
+      }
+
+      /* —— Card tile —— */
+      .card {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        text-align: left;
+        cursor: pointer;
+        color: inherit;
+        font: inherit;
+        animation: card-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(var(--i, 0) * 28ms);
+      }
+
+      @keyframes card-in {
+        from {
+          opacity: 0;
+          transform: translateY(0.75rem) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero::before,
+        .card,
+        .hero-inner {
+          animation: none !important;
+        }
+      }
+
+      .card-frame {
+        position: relative;
+        aspect-ratio: 2 / 3;
+        border-radius: var(--radius-card);
+        overflow: hidden;
+        background:
+          linear-gradient(145deg, var(--paper) 0%, var(--paper-deep) 100%);
+        box-shadow: var(--shadow-card);
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
+      }
+
+      .card:hover .card-frame,
+      .card:focus-visible .card-frame {
+        transform: translateY(-6px) rotate(-0.6deg);
+        box-shadow: 0 18px 36px rgba(8, 18, 24, 0.5);
+      }
+
+      .card:focus-visible {
+        outline: none;
+      }
+
+      .card:focus-visible .card-frame {
+        outline: 2px solid var(--gold-soft);
+        outline-offset: 3px;
+      }
+
+      .card-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.45s ease;
+      }
+
+      .card-frame img.is-loaded {
+        opacity: 1;
+      }
+
+      .card.is-missing .card-frame {
+        background:
+          linear-gradient(160deg, #243840 0%, var(--missing) 55%, #1a282e 100%);
+        box-shadow: 0 8px 20px rgba(8, 18, 24, 0.28);
+      }
+
+      .card.is-missing:hover .card-frame {
+        transform: translateY(-3px);
+      }
+
+      .card-caption {
+        margin: 0.55rem 0 0;
+        font-family: var(--font-display);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--foam);
+        opacity: 0.78;
+      }
+
+      .card.is-missing .card-caption {
+        opacity: 0.4;
+      }
+
+      /* —— Lightbox —— */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: block;
+        padding: 1.5rem;
+        background: rgba(6, 14, 18, 0.88);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+      }
+
+      .lightbox.is-open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .lightbox-panel {
+        position: relative;
+        width: min(1080px, 100%);
+        max-height: calc(100vh - 3rem);
+        margin: 0 auto;
+        overflow: auto;
+        transform: translateY(0.75rem) scale(0.97);
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .lightbox.is-open .lightbox-panel {
+        transform: none;
+      }
+
+      .lightbox-content {
+        display: grid;
+        grid-template-columns: minmax(16rem, 380px) minmax(0, 1fr);
+        gap: 1.6rem;
+        align-items: start;
+        padding: 1.25rem;
+        border: 1px solid rgba(212, 184, 122, 0.24);
+        border-radius: var(--radius-card);
+        background: rgba(14, 36, 48, 0.94);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      .lightbox-card-image {
+        display: block;
+        width: 100%;
+        border-radius: var(--radius-card);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+      }
+
+      .lightbox-title {
+        margin: 0 0 0.45rem;
+        font-family: var(--font-display);
+        font-size: clamp(1.65rem, 4vw, 2.35rem);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--paper);
+      }
+
+      .lightbox-subtitle {
+        margin: 0 0 1rem;
+        color: var(--gold-soft);
+        font-size: 0.76rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        opacity: 0.82;
+      }
+
+      .detail-block {
+        margin: 0 0 1rem;
+      }
+
+      .detail-block h3 {
+        margin: 0 0 0.35rem;
+        color: var(--gold-soft);
+        font-size: 0.76rem;
+        font-weight: 500;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .detail-block p {
+        margin: 0;
+        color: var(--foam);
+        font-size: 0.96rem;
+        line-height: 1.62;
+        opacity: 0.9;
+      }
+
+      .detail-empty {
+        color: var(--foam);
+        font-style: italic;
+        opacity: 0.68;
+      }
+
+      .detail-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin: 1.1rem 0 1.25rem;
+      }
+
+      .detail-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.52rem 0.82rem;
+        border: 1px solid rgba(212, 184, 122, 0.42);
+        border-radius: 999px;
+        color: var(--paper);
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .source-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8.25rem, 1fr));
+        gap: 0.8rem;
+        margin-top: 0.65rem;
+      }
+
+      .source-link {
+        display: grid;
+        gap: 0.42rem;
+        color: var(--foam);
+      }
+
+      .source-thumb {
+        aspect-ratio: 4 / 3;
+        width: 100%;
+        object-fit: cover;
+        border-radius: calc(var(--radius-card) * 0.7);
+        border: 1px solid rgba(200, 221, 230, 0.16);
+        background: rgba(6, 14, 18, 0.32);
+      }
+
+      .source-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .source-credit {
+        color: var(--foam);
+        font-size: 0.74rem;
+        opacity: 0.62;
+      }
+
+      .lightbox-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.25rem;
+      }
+
+      .lightbox-nav button {
+        flex: 1;
+        padding: 0.65rem 1rem;
+        border: 1px solid rgba(212, 184, 122, 0.4);
+        border-radius: 999px;
+        background: rgba(14, 36, 48, 0.9);
+        color: var(--paper);
+        font: inherit;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .lightbox-nav button:hover,
+      .lightbox-nav button:focus-visible {
+        border-color: var(--gold-soft);
+        color: var(--gold-soft);
+      }
+
+      .lightbox-nav button:disabled {
+        cursor: default;
+        opacity: 0.35;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 0.45rem;
+        right: 0.45rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 1px solid rgba(212, 184, 122, 0.4);
+        border-radius: 50%;
+        background: var(--sea-deep);
+        color: var(--paper);
+        font-size: 1.25rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .lightbox-close:hover {
+        border-color: var(--gold-soft);
+        color: var(--gold-soft);
+      }
+
+      @media (max-width: 760px) {
+        .lightbox {
+          padding: 0.85rem;
+        }
+
+        .lightbox-panel {
+          max-height: calc(100vh - 1.7rem);
+        }
+
+        .lightbox-content {
+          grid-template-columns: 1fr;
+          padding: 0.9rem;
+          gap: 1.05rem;
+        }
+
+        .lightbox-card-image {
+          max-width: 17rem;
+          margin: 0 auto;
+        }
+      }
+
+      /* —— Footer —— */
+      footer {
+        padding: 4rem 0 3rem;
+        margin-top: 2rem;
+        border-top: 1px solid rgba(200, 221, 230, 0.1);
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-style: italic;
+        color: var(--foam);
+        opacity: 0.55;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <h1 class="brand">Ventnor <em>Tarot</em></h1>
+        <p class="lede">
+          A photorealistic Rider–Waite–Smith deck set against the real shores,
+          cliffs, and streets of Ventnor.
+        </p>
+        <div class="hero-about" id="about">
+          <p class="vision">
+            This is a full 78-card tarot deck that follows the Rider–Waite tradition,
+            but every card starts from a real photograph taken in or around Ventnor —
+            the cliffs, the sea, the streets, the gardens, the festivals. We add only
+            the people and symbols each card needs, lit and scaled so they belong in
+            the scene. The idea is a deck that feels local and lived-in, not like
+            generic fantasy art.
+          </p>
+          <ul class="rules-summary" aria-label="How the deck is made">
+            <li>
+              <strong>Real backgrounds.</strong>
+              Each card uses a genuine photo. We might crop it or tweak the light,
+              but we don’t invent or replace the place.
+            </li>
+            <li>
+              <strong>Faithful cards.</strong>
+              The figures, objects, and layout follow the Rider–Waite card —
+              nothing important gets left out.
+            </li>
+            <li>
+              <strong>Photorealistic additions.</strong>
+              Anything we add is meant to look like it was there when the photo
+              was taken, not painted or illustrated on top.
+            </li>
+            <li>
+              <strong>One consistent frame.</strong>
+              Every card shares the same border, type, and finish.
+            </li>
+          </ul>
+          <p class="credits">
+            <strong>Photographs</strong> — taken by Christopher Gutteridge and friends,
+            in and around Ventnor.<br />
+            <strong>Cards</strong> — shared under
+            <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">
+              Creative Commons Attribution 4.0 (CC BY 4.0)
+            </a>.
+            You’re welcome to use, share, and adapt them — just credit
+            “Christopher Gutteridge and friends”.
+          </p>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="#major">View the deck</a>
+          <a class="btn btn-ghost" href="#pentacles">Jump to Pentacles</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="deck-nav" aria-label="Deck sections">
+      <div class="wrap">
+        <a href="#card-notes">Card Notes</a>
+        <a href="#major">Major Arcana</a>
+        <a href="#pentacles">Pentacles</a>
+        <a href="#swords">Swords</a>
+        <a href="#cups">Cups</a>
+        <a href="#wands">Wands</a>
+        <a href="map.html">Map</a>
+      </div>
+    </nav>
+
+    <section class="notes-intro wrap" id="card-notes">
+      <h2>Card Notes</h2>
+      <p>
+        Each finished card can carry its own notes: the local idea behind the image,
+        how it translates Rider-Waite-Smith symbolism, and the public source images
+        that are safe to share. Some cards already have full notes; the rest will
+        fill in gradually as the deck records catch up with the finished artwork.
+      </p>
+      <p>
+        Source images are included only when they are suitable for publication.
+        Private person-reference photographs and identifying names are left out by
+        default.
+      </p>
+    </section>
+
+    <main class="wrap" id="deck"></main>
+
+    <footer>
+      <div class="wrap">
+        <p>Missing faces will appear as you finish each card.</p>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">
+          ×
+        </button>
+        <div class="lightbox-content">
+          <div>
+            <img class="lightbox-card-image" id="lightbox-img" src="" alt="" />
+          </div>
+          <div class="lightbox-detail">
+            <h2 class="lightbox-title" id="lightbox-title"></h2>
+            <p class="lightbox-subtitle" id="lightbox-subtitle"></p>
+            <div id="lightbox-notes"></div>
+            <div class="detail-links" id="lightbox-links"></div>
+            <div class="detail-block" id="lightbox-sources-block">
+              <h3>Source Images</h3>
+              <div class="source-gallery" id="lightbox-sources"></div>
+            </div>
+            <div class="lightbox-nav" aria-label="Browse finished cards">
+              <button type="button" id="lightbox-previous" aria-label="Previous finished card">
+                ← Previous
+              </button>
+              <button type="button" id="lightbox-next" aria-label="Next finished card">
+                Next →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="card-data.js"></script>
+    <script>
+      /**
+       * Full 78-card deck definition for the Ventnor Tarot gallery.
+       * Filenames follow the rider-waite / vtarot convention (e.g. maj00, wands02).
+       * @type {{ id: string, sections: Array<{ id: string, title: string, cards: Array<{ file: string, name: string, numeral: string }> }> }}
+       */
+      const DECK = {
+        id: "ventnor",
+        sections: [
+          {
+            id: "major",
+            title: "Major Arcana",
+            cards: [
+              { file: "maj00", name: "The Fool", numeral: "0" },
+              { file: "maj01", name: "The Magician", numeral: "I" },
+              { file: "maj02", name: "The High Priestess", numeral: "II" },
+              { file: "maj03", name: "The Empress", numeral: "III" },
+              { file: "maj04", name: "The Emperor", numeral: "IV" },
+              { file: "maj05", name: "The Hierophant", numeral: "V" },
+              { file: "maj06", name: "The Lovers", numeral: "VI" },
+              { file: "maj07", name: "The Chariot", numeral: "VII" },
+              { file: "maj08", name: "Strength", numeral: "VIII" },
+              { file: "maj09", name: "The Hermit", numeral: "IX" },
+              { file: "maj10", name: "Wheel of Fortune", numeral: "X" },
+              { file: "maj11", name: "Justice", numeral: "XI" },
+              { file: "maj12", name: "The Hanged Man", numeral: "XII" },
+              { file: "maj13", name: "Death", numeral: "XIII" },
+              { file: "maj14", name: "Temperance", numeral: "XIV" },
+              { file: "maj15", name: "The Devil", numeral: "XV" },
+              { file: "maj16", name: "The Tower", numeral: "XVI" },
+              { file: "maj17", name: "The Star", numeral: "XVII" },
+              { file: "maj18", name: "The Moon", numeral: "XVIII" },
+              { file: "maj19", name: "The Sun", numeral: "XIX" },
+              { file: "maj20", name: "Judgement", numeral: "XX" },
+              { file: "maj21", name: "The World", numeral: "XXI" },
+            ],
+          },
+          {
+            id: "pentacles",
+            title: "Pentacles",
+            cards: minorSuit("pents", "Pentacles"),
+          },
+          {
+            id: "swords",
+            title: "Swords",
+            cards: minorSuit("swords", "Swords"),
+          },
+          {
+            id: "cups",
+            title: "Cups",
+            cards: minorSuit("cups", "Cups"),
+          },
+          {
+            id: "wands",
+            title: "Wands",
+            cards: minorSuit("wands", "Wands"),
+          },
+        ],
+      };
+
+      /**
+       * Builds the fourteen Minor Arcana cards for a suit.
+       * @param {string} prefix - Filename prefix (wands, cups, swords, pents).
+       * @param {string} suitLabel - Display suit name.
+       * @returns {Array<{ file: string, name: string, numeral: string }>}
+       */
+      function minorSuit(prefix, suitLabel) {
+        const ranks = [
+          { n: "01", name: `Ace of ${suitLabel}`, numeral: "" },
+          { n: "02", name: `Two of ${suitLabel}`, numeral: "II" },
+          { n: "03", name: `Three of ${suitLabel}`, numeral: "III" },
+          { n: "04", name: `Four of ${suitLabel}`, numeral: "IV" },
+          { n: "05", name: `Five of ${suitLabel}`, numeral: "V" },
+          { n: "06", name: `Six of ${suitLabel}`, numeral: "VI" },
+          { n: "07", name: `Seven of ${suitLabel}`, numeral: "VII" },
+          { n: "08", name: `Eight of ${suitLabel}`, numeral: "VIII" },
+          { n: "09", name: `Nine of ${suitLabel}`, numeral: "IX" },
+          { n: "10", name: `Ten of ${suitLabel}`, numeral: "X" },
+          { n: "11", name: `Page of ${suitLabel}`, numeral: "" },
+          { n: "12", name: `Knight of ${suitLabel}`, numeral: "" },
+          { n: "13", name: `Queen of ${suitLabel}`, numeral: "" },
+          { n: "14", name: `King of ${suitLabel}`, numeral: "" },
+        ];
+        return ranks.map((r) => ({
+          file: `${prefix}${r.n}`,
+          name: r.name,
+          numeral: r.numeral,
+        }));
+      }
+
+      const IMAGE_DIR = ".";
+      /**
+       * Per-card cache-bust versions. Bump only the card that changed when
+       * publishing a new or replacement image; omit unchanged cards (they
+       * default to `"1"`).
+       * @type {Record<string, string>}
+       */
+      const CARD_IMAGE_VERSIONS = {
+        maj00: "2",
+        maj01: "1",
+        maj03: "2",
+        maj05: "1",
+        maj08: "2",
+        maj09: "2",
+        maj12: "2",
+        maj14: "2",
+        maj15: "2",
+        maj18: "2",
+        maj19: "1",
+        cups02: "1",
+        cups04: "3",
+        pents11: "2",
+        pents12: "2",
+        wands04: "1",
+        wands10: "1",
+        wands13: "1",
+        swords02: "2",
+        swords08: "3",
+      };
+      const CARD_DETAILS = window.CARD_DETAILS ?? {};
+      const LEARNING_TAROT_BASE = "https://www.learntarot.com";
+
+      /**
+       * Builds the Learning the Tarot page URL for a Ventnor card id.
+       * Paths match https://www.learntarot.com/cards.htm (e.g. maj00, ca, w4, ppg).
+       * @param {string} file - Card filename without extension (e.g. maj00, cups01).
+       * @returns {string} Absolute URL for that card's Learn Tarot page.
+       */
+      function learningTarotUrlForCard(file) {
+        const major = /^maj(\d{2})$/.exec(file);
+        if (major) {
+          return `${LEARNING_TAROT_BASE}/maj${major[1]}.htm`;
+        }
+
+        const minor = /^(cups|pents|swords|wands)(\d{2})$/.exec(file);
+        if (!minor) {
+          return `${LEARNING_TAROT_BASE}/cards.htm`;
+        }
+
+        const suitLetter = { cups: "c", pents: "p", swords: "s", wands: "w" }[minor[1]];
+        const rank = minor[2];
+        const court = { "11": "pg", "12": "kn", "13": "qn", "14": "kg" };
+        let slug;
+        if (rank === "01") {
+          slug = `${suitLetter}a`;
+        } else if (court[rank]) {
+          slug = `${suitLetter}${court[rank]}`;
+        } else {
+          slug = `${suitLetter}${Number(rank)}`;
+        }
+        return `${LEARNING_TAROT_BASE}/${slug}.htm`;
+      }
+
+      /**
+       * Returns a cache-busted URL for a published card image.
+       * @param {string} file - Card filename without its extension.
+       * @returns {string}
+       */
+      function cardImageUrl(file) {
+        const version = CARD_IMAGE_VERSIONS[file] ?? "1";
+        return `${IMAGE_DIR}/${file}.png?v=${version}`;
+      }
+
+      /**
+       * Renders the full deck gallery into the main element.
+       * @returns {void}
+       */
+      function renderDeck() {
+        const main = document.getElementById("deck");
+        const frag = document.createDocumentFragment();
+        let index = 0;
+
+        for (const section of DECK.sections) {
+          const sectionEl = document.createElement("section");
+          sectionEl.className = "suit";
+          sectionEl.id = section.id;
+
+          const head = document.createElement("div");
+          head.className = "suit-head";
+          head.innerHTML = `
+            <h2>${section.title}</h2>
+            <span class="suit-count" data-section-count="${section.id}">${section.cards.length} cards</span>
+          `;
+
+          const grid = document.createElement("div");
+          grid.className = "grid";
+          grid.setAttribute("role", "list");
+
+          for (const card of section.cards) {
+            grid.appendChild(createCardButton(card, index++));
+          }
+
+          sectionEl.append(head, grid);
+          frag.appendChild(sectionEl);
+        }
+
+        main.appendChild(frag);
+      }
+
+      /**
+       * Creates a gallery tile button for one tarot card.
+       * @param {{ file: string, name: string, numeral: string }} card - Card metadata.
+       * @param {number} index - Visual stagger index.
+       * @returns {HTMLButtonElement}
+       */
+      function createCardButton(card, index) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "card";
+        btn.style.setProperty("--i", String(index % 14));
+        btn.setAttribute("role", "listitem");
+        btn.dataset.file = card.file;
+        btn.dataset.name = card.name;
+        btn.setAttribute("aria-label", card.name);
+
+        const frame = document.createElement("div");
+        frame.className = "card-frame";
+
+        const img = document.createElement("img");
+        img.src = cardImageUrl(card.file);
+        img.alt = card.name;
+        img.loading = "lazy";
+        img.decoding = "async";
+
+        /**
+         * Marks the tile as finished once its PNG has loaded.
+         * @returns {void}
+         */
+        const markReady = () => {
+          if (btn.dataset.settled === "1") return;
+          btn.dataset.settled = "1";
+          img.classList.add("is-loaded");
+          btn.classList.add("is-ready");
+          btn.classList.remove("is-missing");
+          updateProgress();
+          syncLightboxToHash();
+        };
+
+        /**
+         * Marks the tile as unfinished when the PNG is absent (404).
+         * @returns {void}
+         */
+        const markMissing = () => {
+          if (btn.dataset.settled === "1") return;
+          btn.dataset.settled = "1";
+          btn.classList.add("is-missing");
+          btn.classList.remove("is-ready");
+          img.removeAttribute("src");
+          updateProgress();
+        };
+
+        img.addEventListener("load", markReady);
+        img.addEventListener("error", markMissing);
+
+        // Cached images may already be complete before listeners attach.
+        if (img.complete) {
+          if (img.naturalWidth > 0) markReady();
+          else markMissing();
+        }
+
+        frame.append(img);
+
+        const caption = document.createElement("p");
+        caption.className = "card-caption";
+        caption.textContent = card.name;
+
+        btn.append(frame, caption);
+
+        btn.addEventListener("click", () => {
+          if (btn.classList.contains("is-ready")) {
+            openLightbox(btn);
+          }
+        });
+
+        return btn;
+      }
+
+      /**
+       * Recounts loaded cards and updates each section's ready count.
+       * @returns {void}
+       */
+      function updateProgress() {
+        for (const section of DECK.sections) {
+          const ready = section.cards.filter((c) => {
+            const el = document.querySelector(`.card[data-file="${c.file}"]`);
+            return el && el.classList.contains("is-ready");
+          }).length;
+          const label = document.querySelector(`[data-section-count="${section.id}"]`);
+          if (label) {
+            label.textContent = `${ready} / ${section.cards.length} complete`;
+          }
+        }
+      }
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxTitle = document.getElementById("lightbox-title");
+      const lightboxSubtitle = document.getElementById("lightbox-subtitle");
+      const lightboxNotes = document.getElementById("lightbox-notes");
+      const lightboxLinks = document.getElementById("lightbox-links");
+      const lightboxSources = document.getElementById("lightbox-sources");
+      const lightboxSourcesBlock = document.getElementById("lightbox-sources-block");
+      const previousButton = document.getElementById("lightbox-previous");
+      const nextButton = document.getElementById("lightbox-next");
+      let closeLightboxTimer;
+
+      /**
+       * Gets the finished card filename from the current URL fragment.
+       * @returns {string} Card filename without its extension, or an empty string.
+       */
+      function cardFileFromHash() {
+        return window.location.hash.slice(1);
+      }
+
+      /**
+       * Finds a loaded gallery card by its filename.
+       * @param {string} file - Card filename without its extension.
+       * @returns {HTMLButtonElement | undefined} Matching loaded card, if available.
+       */
+      function findLoadedCard(file) {
+        return Array.from(document.querySelectorAll(".card.is-ready")).find(
+          (card) => card.dataset.file === file,
+        );
+      }
+
+      /**
+       * Opens the lightbox UI for a card without changing browser history.
+       * @param {HTMLButtonElement} cardButton - Loaded gallery card to display.
+       * @returns {void}
+       */
+      function showLightbox(cardButton) {
+        window.clearTimeout(closeLightboxTimer);
+        showLightboxCard(cardButton);
+        lightbox.hidden = false;
+        requestAnimationFrame(() => lightbox.classList.add("is-open"));
+        document.getElementById("lightbox-close").focus();
+      }
+
+      /**
+       * Pushes a selected card onto the same-page history stack.
+       * @param {HTMLButtonElement} cardButton - Loaded gallery card to navigate to.
+       * @returns {void}
+       */
+      function openLightbox(cardButton) {
+        const { file } = cardButton.dataset;
+        window.history.pushState({ ventnorTarotCard: file }, "", `#${file}`);
+        showLightbox(cardButton);
+      }
+
+      /**
+       * Displays a loaded gallery card in the open lightbox.
+       * @param {HTMLButtonElement} cardButton - Loaded gallery card to display.
+       * @returns {void}
+       */
+      function showLightboxCard(cardButton) {
+        const { file, name } = cardButton.dataset;
+        const detail = CARD_DETAILS[file] ?? {};
+        lightbox.dataset.currentFile = file;
+        lightboxImg.src = cardImageUrl(file);
+        lightboxImg.alt = name;
+        lightboxTitle.textContent = name;
+        lightboxSubtitle.textContent = detail.peopleContext
+          ? `Card notes - ${detail.peopleContext}`
+          : "Card notes";
+        renderCardNotes(detail);
+        renderCardLinks(file);
+        renderSourceImages(detail.sourceImages ?? []);
+
+        const hasMultipleCards = document.querySelectorAll(".card.is-ready").length > 1;
+        previousButton.disabled = !hasMultipleCards;
+        nextButton.disabled = !hasMultipleCards;
+      }
+
+      /**
+       * Renders the text notes for a selected card.
+       * @param {{ summary?: string, riderWaiteNotes?: string, ventnorNotes?: string }} detail
+       * @returns {void}
+       */
+      function renderCardNotes(detail) {
+        lightboxNotes.textContent = "";
+
+        const blocks = [
+          ["About this card", detail.summary],
+          ["Rider-Waite link", detail.riderWaiteNotes],
+          ["Ventnor setting", detail.ventnorNotes],
+        ].filter(([, text]) => Boolean(text));
+
+        if (blocks.length === 0) {
+          const empty = document.createElement("p");
+          empty.className = "detail-empty";
+          empty.textContent = "Notes not added yet.";
+          lightboxNotes.append(empty);
+          return;
+        }
+
+        for (const [heading, text] of blocks) {
+          const block = document.createElement("section");
+          block.className = "detail-block";
+
+          const title = document.createElement("h3");
+          title.textContent = heading;
+
+          const copy = document.createElement("p");
+          copy.textContent = text;
+
+          block.append(title, copy);
+          lightboxNotes.append(block);
+        }
+      }
+
+      /**
+       * Renders external reference links for a selected card.
+       * @param {string} file - Card filename without extension.
+       * @returns {void}
+       */
+      function renderCardLinks(file) {
+        lightboxLinks.textContent = "";
+
+        const learningLink = document.createElement("a");
+        learningLink.className = "detail-link";
+        learningLink.href = learningTarotUrlForCard(file);
+        learningLink.target = "_blank";
+        learningLink.rel = "noopener";
+        learningLink.textContent = "Learning the Tarot";
+        lightboxLinks.append(learningLink);
+      }
+
+      /**
+       * Renders publication-safe source images for a selected card.
+       * @param {Array<{ src: string, label: string, alt: string, kind?: string, credit?: string }>} images
+       * @returns {void}
+       */
+      function renderSourceImages(images) {
+        lightboxSources.textContent = "";
+        lightboxSourcesBlock.hidden = false;
+
+        if (images.length === 0) {
+          const empty = document.createElement("p");
+          empty.className = "detail-empty";
+          empty.textContent = "No public source images added yet.";
+          lightboxSources.append(empty);
+          return;
+        }
+
+        for (const source of images) {
+          const link = document.createElement("a");
+          link.className = "source-link";
+          link.href = source.src;
+          link.target = "_blank";
+          link.rel = "noopener";
+
+          const img = document.createElement("img");
+          img.className = "source-thumb";
+          img.src = source.src;
+          img.alt = source.alt;
+          img.loading = "lazy";
+          img.decoding = "async";
+          img.addEventListener("error", () => {
+            link.hidden = true;
+          });
+
+          const label = document.createElement("span");
+          label.className = "source-label";
+          label.textContent = source.label;
+
+          link.append(img, label);
+
+          if (source.credit) {
+            const credit = document.createElement("span");
+            credit.className = "source-credit";
+            credit.textContent = source.credit;
+            link.append(credit);
+          }
+
+          lightboxSources.append(link);
+        }
+      }
+
+      /**
+       * Moves the lightbox to the next loaded card in deck order.
+       * @param {number} direction - Use -1 for previous or 1 for next.
+       * @returns {void}
+       */
+      function moveLightbox(direction) {
+        const loadedCards = Array.from(document.querySelectorAll(".card.is-ready"));
+        if (loadedCards.length < 2) return;
+
+        const currentIndex = loadedCards.findIndex(
+          (card) => card.dataset.file === lightbox.dataset.currentFile,
+        );
+        const nextIndex = (currentIndex + direction + loadedCards.length) % loadedCards.length;
+        openLightbox(loadedCards[nextIndex]);
+      }
+
+      /**
+       * Closes the lightbox UI without navigating browser history.
+       * @returns {void}
+       */
+      function hideLightbox() {
+        lightbox.classList.remove("is-open");
+        window.clearTimeout(closeLightboxTimer);
+        closeLightboxTimer = window.setTimeout(() => {
+          lightbox.hidden = true;
+          lightboxImg.removeAttribute("src");
+        }, 280);
+      }
+
+      /**
+       * Synchronizes the lightbox with the card filename in the URL fragment.
+       * @returns {void}
+       */
+      function syncLightboxToHash() {
+        const cardButton = findLoadedCard(cardFileFromHash());
+        if (cardButton) {
+          showLightbox(cardButton);
+        } else {
+          hideLightbox();
+        }
+      }
+
+      /**
+       * Closes the dialog and returns to the unselected gallery URL.
+       * @returns {void}
+       */
+      function closeLightbox() {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+        hideLightbox();
+      }
+
+      document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+      previousButton.addEventListener("click", () => moveLightbox(-1));
+      nextButton.addEventListener("click", () => moveLightbox(1));
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("is-open")) return;
+
+        if (event.key === "Escape") {
+          closeLightbox();
+        } else if (event.key === "ArrowLeft") {
+          moveLightbox(-1);
+        } else if (event.key === "ArrowRight") {
+          moveLightbox(1);
+        }
+      });
+      window.addEventListener("popstate", syncLightboxToHash);
+      window.addEventListener("hashchange", syncLightboxToHash);
+
+      renderDeck();
+      syncLightboxToHash();
+    </script>
+  </body>
+</html>

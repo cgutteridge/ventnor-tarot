@@ -1,0 +1,118 @@
+{
+  "tile_size": 256,
+  "landmarks": {
+    "bonchurch_beach": {
+      "lat": 50.5978,
+      "lon": -1.187
+    },
+    "steephill_cove": {
+      "lat": 50.5886,
+      "lon": -1.2234
+    },
+    "radar_station": {
+      "lat": 50.6027,
+      "lon": -1.1958
+    },
+    "ventnor_cemetery_top": {
+      "lat": 50.5967,
+      "lon": -1.2159
+    },
+    "botanic_garden_far_side": {
+      "lat": 50.5885,
+      "lon": -1.2312
+    }
+  },
+  "requested_bounds": {
+    "south": 50.58637,
+    "north": 50.60483,
+    "west": -1.23783,
+    "east": -1.1803700000000001
+  },
+  "zooms": {
+    "14": {
+      "zoom": 14,
+      "tile_x_min": 8135,
+      "tile_x_max": 8138,
+      "tile_y_min": 5513,
+      "tile_y_max": 5514,
+      "tiles_wide": 4,
+      "tiles_high": 2,
+      "pixel_width": 1024,
+      "pixel_height": 512,
+      "geo_bounds": {
+        "north": 50.61113171332363,
+        "south": 50.58323661480589,
+        "east": -1.16455078125,
+        "west": -1.25244140625
+      }
+    },
+    "15": {
+      "zoom": 15,
+      "tile_x_min": 16271,
+      "tile_x_max": 16276,
+      "tile_y_min": 11026,
+      "tile_y_max": 11029,
+      "tiles_wide": 6,
+      "tiles_high": 4,
+      "pixel_width": 1536,
+      "pixel_height": 1024,
+      "geo_bounds": {
+        "north": 50.61113171332363,
+        "south": 50.58323661480589,
+        "east": -1.175537109375,
+        "west": -1.241455078125
+      }
+    },
+    "16": {
+      "zoom": 16,
+      "tile_x_min": 32542,
+      "tile_x_max": 32553,
+      "tile_y_min": 22053,
+      "tile_y_max": 22059,
+      "tiles_wide": 12,
+      "tiles_high": 7,
+      "pixel_width": 3072,
+      "pixel_height": 1792,
+      "geo_bounds": {
+        "north": 50.607645730090624,
+        "south": 50.58323661480589,
+        "east": -1.175537109375,
+        "west": -1.241455078125
+      }
+    },
+    "17": {
+      "zoom": 17,
+      "tile_x_min": 65085,
+      "tile_x_max": 65106,
+      "tile_y_min": 44107,
+      "tile_y_max": 44118,
+      "tiles_wide": 22,
+      "tiles_high": 12,
+      "pixel_width": 5632,
+      "pixel_height": 3072,
+      "geo_bounds": {
+        "north": 50.60590264161327,
+        "south": 50.58498054281801,
+        "east": -1.17828369140625,
+        "west": -1.23870849609375
+      }
+    },
+    "18": {
+      "zoom": 18,
+      "tile_x_min": 130170,
+      "tile_x_max": 130212,
+      "tile_y_min": 88215,
+      "tile_y_max": 88236,
+      "tiles_wide": 43,
+      "tiles_high": 22,
+      "pixel_width": 11008,
+      "pixel_height": 5632,
+      "geo_bounds": {
+        "north": 50.605031073159054,
+        "south": 50.58585248260492,
+        "east": -1.179656982421875,
+        "west": -1.23870849609375
+      }
+    }
+  }
+}

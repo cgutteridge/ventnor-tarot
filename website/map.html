@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ventnor Tarot — Locations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+      :root {
+        --ink: #1c1814;
+        --ink-soft: #3a342c;
+        --paper: #f3ebe0;
+        --paper-deep: #e6d9c8;
+        --gold: #b8924a;
+        --gold-soft: #d4b87a;
+        --sea: #1a3a4a;
+        --sea-deep: #0e2430;
+        --foam: #c8dde6;
+        --header-h: 3.25rem;
+        --font-display: "Cormorant Garamond", "Palatino Linotype", Palatino,
+          serif;
+        --font-body: "Outfit", "Avenir Next", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        font-family: var(--font-body);
+        font-weight: 300;
+        background: var(--sea-deep);
+        color: var(--paper);
+      }
+
+      /* ── Header ─────────────────────────────────────────────── */
+      .map-header {
+        position: fixed;
+        inset-block-start: 0;
+        inset-inline: 0;
+        z-index: 1000;
+        height: var(--header-h);
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 0 1.25rem;
+        background: rgba(14, 36, 48, 0.97);
+        border-bottom: 1px solid rgba(184, 146, 74, 0.35);
+        backdrop-filter: blur(6px);
+      }
+
+      .map-header .back-link {
+        font-family: var(--font-body);
+        font-size: 0.78rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold-soft);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .map-header .back-link:hover {
+        color: var(--paper);
+      }
+
+      .map-header .brand {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--paper);
+        letter-spacing: 0.04em;
+        flex: 1;
+      }
+
+      .map-header .brand em {
+        font-style: italic;
+        color: var(--gold-soft);
+      }
+
+      .map-header .count {
+        font-size: 0.75rem;
+        font-weight: 300;
+        color: var(--foam);
+        opacity: 0.65;
+        white-space: nowrap;
+      }
+
+      /* ── Map ─────────────────────────────────────────────────── */
+      #map {
+        position: fixed;
+        inset: var(--header-h) 0 0 0;
+      }
+
+      /* ── Leaflet popup overrides ─────────────────────────────── */
+      .leaflet-popup-content-wrapper {
+        background: rgba(14, 36, 48, 0.97);
+        border: 1px solid rgba(184, 146, 74, 0.5);
+        border-radius: 0.45rem;
+        color: var(--paper);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .leaflet-popup-tip-container {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+      }
+
+      .leaflet-popup-tip {
+        background: rgba(14, 36, 48, 0.97);
+      }
+
+      .leaflet-popup-content {
+        margin: 0;
+        width: auto !important;
+      }
+
+      .leaflet-popup-close-button {
+        color: var(--gold-soft) !important;
+        font-size: 1.1rem !important;
+        padding: 0.25rem 0.4rem !important;
+      }
+
+      .leaflet-popup-close-button:hover {
+        color: var(--paper) !important;
+      }
+
+      /* ── Card popup layout ───────────────────────────────────── */
+      .card-popup {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.75rem 0.9rem 0.75rem 0.75rem;
+        min-width: 180px;
+        max-width: 280px;
+        font-family: var(--font-body);
+      }
+
+      .card-popup-thumb {
+        flex-shrink: 0;
+        width: 54px;
+        border-radius: 0.25rem;
+        border: 1px solid rgba(184, 146, 74, 0.4);
+        display: block;
+      }
+
+      .card-popup-thumb[hidden] {
+        display: none;
+      }
+
+      .card-popup-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding-top: 0.1rem;
+      }
+
+      .card-popup-name {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--paper);
+        line-height: 1.2;
+      }
+
+      .card-popup-place {
+        font-size: 0.75rem;
+        font-weight: 300;
+        color: var(--gold-soft);
+        line-height: 1.3;
+      }
+
+      .card-popup-link {
+        margin-top: 0.3rem;
+        font-size: 0.72rem;
+        font-weight: 400;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--foam);
+        text-decoration: none;
+        opacity: 0.7;
+      }
+
+      .card-popup-link:hover {
+        opacity: 1;
+        color: var(--gold-soft);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="map-header">
+      <a class="back-link" href="index.html">← Gallery</a>
+      <h1 class="brand">Ventnor <em>Tarot</em> — Locations</h1>
+      <span class="count" id="marker-count"></span>
+    </header>
+
+    <div id="map" role="application" aria-label="Map of Ventnor Tarot card locations"></div>
+
+    <script src="card-data.js"></script>
+    <script>
+      /**
+       * Full 78-card deck definition — mirrors index.html so card names are
+       * available without importing the whole gallery page.
+       * @type {Array<{ file: string, name: string }>}
+       */
+      const ALL_CARDS = (function () {
+        function minorSuit(prefix, suit) {
+          const ranks = [
+            { n: "01", name: `Ace of ${suit}` },
+            { n: "02", name: `Two of ${suit}` },
+            { n: "03", name: `Three of ${suit}` },
+            { n: "04", name: `Four of ${suit}` },
+            { n: "05", name: `Five of ${suit}` },
+            { n: "06", name: `Six of ${suit}` },
+            { n: "07", name: `Seven of ${suit}` },
+            { n: "08", name: `Eight of ${suit}` },
+            { n: "09", name: `Nine of ${suit}` },
+            { n: "10", name: `Ten of ${suit}` },
+            { n: "11", name: `Page of ${suit}` },
+            { n: "12", name: `Knight of ${suit}` },
+            { n: "13", name: `Queen of ${suit}` },
+            { n: "14", name: `King of ${suit}` },
+          ];
+          return ranks.map((r) => ({ file: `${prefix}${r.n}`, name: r.name }));
+        }
+
+        return [
+          { file: "maj00", name: "The Fool" },
+          { file: "maj01", name: "The Magician" },
+          { file: "maj02", name: "The High Priestess" },
+          { file: "maj03", name: "The Empress" },
+          { file: "maj04", name: "The Emperor" },
+          { file: "maj05", name: "The Hierophant" },
+          { file: "maj06", name: "The Lovers" },
+          { file: "maj07", name: "The Chariot" },
+          { file: "maj08", name: "Strength" },
+          { file: "maj09", name: "The Hermit" },
+          { file: "maj10", name: "Wheel of Fortune" },
+          { file: "maj11", name: "Justice" },
+          { file: "maj12", name: "The Hanged Man" },
+          { file: "maj13", name: "Death" },
+          { file: "maj14", name: "Temperance" },
+          { file: "maj15", name: "The Devil" },
+          { file: "maj16", name: "The Tower" },
+          { file: "maj17", name: "The Star" },
+          { file: "maj18", name: "The Moon" },
+          { file: "maj19", name: "The Sun" },
+          { file: "maj20", name: "Judgement" },
+          { file: "maj21", name: "The World" },
+          ...minorSuit("pents", "Pentacles"),
+          ...minorSuit("swords", "Swords"),
+          ...minorSuit("cups", "Cups"),
+          ...minorSuit("wands", "Wands"),
+        ];
+      })();
+
+      /** @type {Record<string, string>} */
+      const CARD_NAMES = Object.fromEntries(
+        ALL_CARDS.map((c) => [c.file, c.name]),
+      );
+
+      // ── Map init ────────────────────────────────────────────────────────────
+
+      const ventnorCentre = [50.594, -1.208];
+
+      const leafletMap = L.map("map", {
+        center: ventnorCentre,
+        zoom: 14,
+        zoomControl: true,
+      });
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+      }).addTo(leafletMap);
+
+      // ── Markers ─────────────────────────────────────────────────────────────
+
+      const CARD_DETAILS = window.CARD_DETAILS ?? {};
+
+      /** @type {L.CircleMarker[]} */
+      const markers = [];
+
+      for (const [id, detail] of Object.entries(CARD_DETAILS)) {
+        const bg = detail.sourceImages?.find(
+          (s) => s.kind === "background" && s.location?.latitude != null,
+        );
+        if (!bg) continue;
+
+        const { latitude, longitude, name: place } = bg.location;
+        const cardName = CARD_NAMES[id] ?? id;
+
+        const marker = L.circleMarker([latitude, longitude], {
+          radius: 9,
+          color: "#b8924a",
+          weight: 2,
+          fillColor: "#b8924a",
+          fillOpacity: 0.75,
+        }).addTo(leafletMap);
+
+        const thumbSrc = `cards/${id}.png`;
+
+        marker.bindPopup(() => {
+          const wrap = document.createElement("div");
+          wrap.className = "card-popup";
+
+          const img = document.createElement("img");
+          img.className = "card-popup-thumb";
+          img.src = thumbSrc;
+          img.alt = cardName;
+          img.addEventListener("error", () => {
+            img.hidden = true;
+          });
+
+          const info = document.createElement("div");
+          info.className = "card-popup-info";
+
+          const name = document.createElement("div");
+          name.className = "card-popup-name";
+          name.textContent = cardName;
+
+          info.append(name);
+
+          if (place) {
+            const placeEl = document.createElement("div");
+            placeEl.className = "card-popup-place";
+            placeEl.textContent = place;
+            info.append(placeEl);
+          }
+
+          const link = document.createElement("a");
+          link.className = "card-popup-link";
+          link.href = `index.html#${id}`;
+          link.textContent = "View card →";
+          info.append(link);
+
+          wrap.append(img, info);
+          return wrap;
+        });
+
+        markers.push(marker);
+      }
+
+      // Update count in header
+      const countEl = document.getElementById("marker-count");
+      if (countEl) {
+        countEl.textContent = `${markers.length} locations`;
+      }
+    </script>
+  </body>
+</html>
